@@ -2,13 +2,18 @@
 
 The source code for my personal website.
 
-## Building
+## Build
 
 It's a static site built using [Hugo](https://gohugo.io/) with
 [Kayal](https://github.com/mnjm/kayal) theme.
 
 There are no custom build steps, just standard Hugo workflow. See the
 documentation linked above.
+
+## Deploy
+
+The site is deployed on Github Pages. See
+[.github/workflows/hugo.yaml](./.github/workflows/hugo.yaml) for details.
 
 ## License
 
