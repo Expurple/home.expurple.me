@@ -81,9 +81,9 @@ I really love the idea of having a central "hub" for my public social accounts
 and media, that's why I made this site.
 
 I always planned to eventually add a blog to it, but I didn't have any good post
-ideas until I started putting together the [home page]({{< ref "/" >}} "Home")
-with all the social links. That's when I had this realization about its purpose
-and my tendency to store and organize things.
+ideas until I started putting together the [home page]({{< ref "/" >}}) with all
+the social links. That's when I had this realization about its purpose and my
+tendency to store and organize things.
 
 To be fair, this post has only touched on "storing" stuff, rather than
 "organizing" or "accessing" it. Having a structure that makes sense is very
