@@ -1,6 +1,5 @@
 +++
 title = "Dmitrii Aleksandrov's home"
-date = 2024-09-08T21:33:28+04:00
 draft = false
 +++
 
@@ -39,8 +38,8 @@ and the Rust ecosystem.
 
 ## Music
 
-- I have a [YouTube channel](https://www.youtube.com/@expurple) where I mostly
-  post drum covers.
+I have a [YouTube channel](https://www.youtube.com/@expurple) where I upload
+from time to time.
 
 ### Band history
 
