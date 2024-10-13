@@ -1,0 +1,16 @@
+<!-- Forked from themes/kayal/layouts/partials/footer.html to add licences -->
+<footer>
+  <div class="copyright">
+    {{ with .Site.Params.copyright }} © {{ dateFormat "2006" now }} {{ . | safeHTML }} {{ end }}
+  </div>
+  <div class="licences">
+    The content is <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+    The <a href="https://github.com/expurple/home.expurple.me">source code</a> is
+    <a href="https://opensource.org/license/MIT">MIT</a>
+  </div>
+  {{ if not .Site.Params.removeAttribution }}
+  <div class="attribution">
+    Built with <a href="https://gohugo.io" target="_blank">Hugo</a> & <a href="https://github.com/mnjm/kayal" target="_blank">Kayal</a>
+  </div>
+  {{ end }}
+</footer>

@@ -22,7 +22,7 @@ highlightCurrentMenu = true
 # The sections to display in the recent articles list. If not provided, the section with the most articles is used.
 mainSections = ["posts"]
 # Whether to remove Hugo and theme attribution in the footer.
-removeAttribution = false
+removeAttribution = true
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
 showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
