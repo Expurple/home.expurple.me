@@ -1,6 +1,7 @@
 +++
 title = 'I Love Organizing Stuff'
-date = 2024-09-15T20:29:26+04:00
+date = 2024-09-15
+lastmod = 2024-11-08
 draft = false
 showToC = false
 +++
@@ -43,10 +44,10 @@ I save my shell history and browsing history. "Shell history is your best
 productivity tool" [^1]
 
 I have 5 years of diary in [Daylio](https://daylio.net/) and 3 years of all my
-income/expences in Excel. This is useful when we wonder or argue about something
+income/expenses in Excel. This is useful when we wonder or argue about something
 with my girlfriend 😁
 
-Surely, I also save my documents, resumes and medical records.
+Surely, I also save my documents, resumes, and medical records.
 
 When I read an article and like it, I
 [download](https://github.com/gildas-lormeau/SingleFile) it. It's nice to be
@@ -66,11 +67,11 @@ who doesn't know what to listen to, or when I'm looking for examples of a
 specific vibe. I want to share it here when I figure out how to integrate it
 best.
 
-Of course, I have an even larger file with music that I **plan** to listen. And
-similar ones for movies, books and blogs.
+Of course, I have an even larger file with music that I **plan** to listen to.
+And similar ones for movies, books, and blogs.
 
 I take pictures and write short notes/reviews of guitars, headphones,
-smartphones and laptops that I own. I want to publish the guitars here at some
+smartphones, and laptops that I own. I want to publish the guitars here at some
 point. On the other hand, I rarely write "normal" reviews like on Google Maps.
 
 I probably spent too much time reordering these paragraphs.

@@ -1,16 +1,17 @@
 +++
 title = 'Decision-Making in a Rock Band'
-date = 2024-11-07T13:22:24+04:00
+date = 2024-11-07
+lastmod = 2024-11-08
 draft = false
 +++
 
-How do you run a rock band and avoid endless arguing, frustration and eventual
-breakup? It's an age old question, and today I'm trying to answer it.
+How do you run a rock band and avoid endless arguing, frustration, and eventual
+breakup? It's an age-old question, and today I'm trying to answer it.
 
 Specifically, I'm going to discuss unknown hobbyist bands where no members are
 paid. It's the only situation that I'm familiar with. And it requires the
 process itself to be comfortable and rewarding for everybody. There are no
-financial/promotional insentives to stay otherwise.
+financial/promotional incentives to stay otherwise.
 
 And people don't! What's the average lifespan of a band/lineup? Like, 2 years?
 
@@ -18,10 +19,10 @@ And people don't! What's the average lifespan of a band/lineup? Like, 2 years?
 
 When I joined, I was the most educated and skilled member. I was respected for
 this. I had creative freedom to implement my ideas. We didn't have "too many
-cooks in the kitchen". The guys didn't have as many musical ideas, or were
-humble about them. This was great at the time, because I had a focused vision
-for the upcoming [album](https://band.link/postoyannyye3) and the sound that I
-wanted to explore.
+cooks in the kitchen". The guys didn't have as many musical ideas or were humble
+about them. This was great at the time because I had a focused vision for the
+upcoming [album](https://band.link/postoyannyye3) and the sound that I wanted to
+explore.
 
 And at the same time, I wasn't the formal leader, as in "the founding member" or
 "the only person interested in pushing the project forward". This was great too,
@@ -46,16 +47,16 @@ So far, sounds great. But, on the other hand:
   the album took 1.5 years to make. And a lot of my effort too. It was worth it,
   but when it was done, I was terrified of going through the same process again.
   I didn't want to write and record the next one.
-- I tried to change the process, let go of that control and rehearse some of the
-  other guys' songs. But I didn't like those and ended up leaving the band. And
-  afterwards, I also took an extended break from music during the *next* 2
+- I tried to change the process, let go of that control, and rehearse some of
+  the other guys' songs. But I didn't like those and ended up leaving the band.
+  And afterwards, I also took an extended break from music during the *next* 2
   years.
 
 ## Pondering
 
 What can this story teach us? How can a band keep playing together sustainably?
 It's a hobby, after all. I do this for pleasure. It shouldn't cause all this
-negativity and require extened breaks to recover.
+negativity and require extended breaks to recover.
 
 Wouldn't my problems be solved if I found more skilled bandmates to play with?
 Yes, *these* problems would be solved. But go back and re-read the advantages of
@@ -83,7 +84,7 @@ No creative input, no day-to-day effort = useless band member, dead weight.
 
 A "leader" who puts in little day-to-day effort = usually, he's just an ["ideas
 guy"](https://www.reddit.com/r/gamedev/comments/113k1fv/heres_a_thing_about_the_idea_guy_and_the_real/)
-clown. Maybe, with some lineups this "philosophical guidance" might work? I
+clown. Maybe, with some lineups, this "philosophical guidance" might work? I
 haven't seen this, though.
 
 A "boring" reliable member with no burning vision = you usually need a few of
@@ -91,7 +92,7 @@ these, provided that you already have a creative leader. But beware of the case
 when the leader is overwhelmed with responsibility, or the next case:
 
 A member who puts in a lot of effort, wants to implement his own ideas, but his
-ideas are ignored = a dangerous situation that needs to be prevented. A break up
+ideas are ignored = a dangerous situation that needs to be prevented. A breakup
 typically follows.
 
 An empowered creative leader who puts in a lot of effort = every band usually
@@ -119,11 +120,11 @@ compromise that's closer to the version that I voted against.
 As I think about it now, that's expected. I didn't write this song. I'm not the
 band leader. I'm not even competent in visual arts. **I don't have an authority
 on *this* topic**. I care about this release because I really like the song, but
-I shoudn't have got so invested in the cover art. In hindsight, I only wasted
+I shouldn't have got so invested in the cover art. In hindsight, I only wasted
 everyone's time with these discussions. **We shouldn't discuss everything, vote
-on everything and compromise on everything**. Specialize instead! Pick an area
+on everything, and compromise on everything**. Specialize instead! Pick an area
 that you're proficient in and passionate about, and *own it*. Save your
-bandmates' time end energy! You've already heard about ["design by
+bandmates' time and energy! You've already heard about ["design by
 committee"](https://en.wikipedia.org/wiki/Design_by_committee). Avoid it! Don't
 drag discussions on topics that you don't *really* care about. Save your energy
 too.
@@ -135,7 +136,7 @@ every decision. Quite the opposite! We have a team of specialists where everyone
 is hired for a specific role. We trust them to do their job well, and they have
 the final say in their responsibility area. We try to handle these areas by
 ourselves and avoid needless communication overhead. The issues are escalated
-and discussed if they fall outside of the personal responsibility area or the
+and discussed if they fall outside of the personal responsibility area or if the
 person doesn't have the skills/knowledge to solve a specific issue. I think,
 this is a very useful heuristic.
 
