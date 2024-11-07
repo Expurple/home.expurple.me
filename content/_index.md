@@ -45,3 +45,7 @@ from time to time.
 
 - Since 2024, I play drums in [Мало-Помалу](https://www.instagram.com/malo_pomalu_band/).
 - In 2019-2021, I played guitar in [Постоянные](https://www.youtube.com/@postoyannyye).
+
+## Blogging
+
+Here I [post]({{< ref "/posts/" >}}) my thoughts on these topics and more.
