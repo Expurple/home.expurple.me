@@ -1,7 +1,7 @@
 +++
 title = 'Decision-Making in a Rock Band'
 date = 2024-11-07
-lastmod = 2024-11-08
+lastmod = 2024-11-23
 draft = false
 +++
 
@@ -17,12 +17,12 @@ And people don't! What's the average lifespan of a band/lineup? Like, 2 years?
 
 ## My 2 years in [Постоянные](https://band.link/postoyannyye)
 
-When I joined, I was the most educated and skilled member. I was respected for
-this. I had creative freedom to implement my ideas. We didn't have "too many
-cooks in the kitchen". The guys didn't have as many musical ideas or were humble
-about them. This was great at the time because I had a focused vision for the
-upcoming [album](https://band.link/postoyannyye3) and the sound that I wanted to
-explore.
+When I joined, I was one of the two most educated and skilled members. [The
+second one](https://www.youtube.com/@Dezrok9611/videos) wasn't interested in
+authoring, and the other guys didn't have many ideas either. So, I had creative
+freedom to implement my ideas. We didn't have "too many cooks in the kitchen".
+This felt great because I had a focused vision for the upcoming
+[album](https://band.link/postoyannyye3) and the sound that I wanted to explore.
 
 And at the same time, I wasn't the formal leader, as in "the founding member" or
 "the only person interested in pushing the project forward". This was great too,
@@ -35,8 +35,7 @@ So far, sounds great. But, on the other hand:
 - I was often mad at rehearsals and had to explain some things that seemed
   obvious to me.
 - When re-watching our shows, I was often more disappointed in my bandmates'
-  performance, rather than mine. And I still think that there were objective
-  reasons for that.
+  performance, rather than mine.
 - Similarly, when the time came to record the album, I was disappointed in the
   bassist's and the second guitarist's performances. I ended up recording their
   parts by myself. I wrote and demoed most of them anyway.
@@ -60,9 +59,9 @@ negativity and require extended breaks to recover.
 
 Wouldn't my problems be solved if I found more skilled bandmates to play with?
 Yes, *these* problems would be solved. But go back and re-read the advantages of
-playing in that band. Why would skilled bandmates follow my every creative whim?
-The team dynamic would be totally different. It would be a [herd of
-cats](https://en.wikipedia.org/wiki/Herding_cats). And those bands also argue
+playing in that band. Why would four other skilled musicians follow my every
+creative whim? The team dynamic would be totally different. It would be a [herd
+of cats](https://en.wikipedia.org/wiki/Herding_cats). And those bands also argue
 and break up all the time. See [The
 Beatles](https://en.wikipedia.org/wiki/The_Beatles), four absolutely talented
 creative individuals who all contributed a lot, but also argued a lot and
