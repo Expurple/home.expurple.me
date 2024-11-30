@@ -219,6 +219,8 @@ In my opinion, these issues aren't nearly as fundamental and annoying as the
 issues with exceptions. Now I *can* conclude that Rust has the best error
 handling! 💥
 
+---
+
 ## Related reading
 
 Good articles that I haven't hyperlinked anywhere else in the post:
@@ -230,6 +232,12 @@ Good articles that I haven't hyperlinked anywhere else in the post:
 - [Either vs Exception Handling](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
 - [The Error Model](https://joeduffyblog.com/2016/02/07/the-error-model/)
 - [Error Handling in Rust](https://nrc.github.io/error-docs/intro.html)
+
+## Discuss
+
+- [r/rust](https://www.reddit.com/r/rust/comments/1h3kdye/rust_solves_the_issues_with_exceptions/?)
+- [r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/comments/1h3khye/rust_solves_the_issues_with_exceptions/?)
+- [Hacker News](https://news.ycombinator.com/item?id=42283549)
 
 [^failures-paper]: [Simple Testing Can Prevent Most Critical Failures: An
 Analysis of Production Failures in Distributed Data-intensive
