@@ -23,7 +23,7 @@ enableRobotsTXT = true
 summaryLength = 0
 
 # Build drafts during site generation.
-buildDrafts = true
+buildDrafts = false
 # Build pages with future dates during site generation.
 buildFuture = true
 
