@@ -1,6 +1,7 @@
 +++
 title = 'Rust Solves The Issues With Exceptions'
 date = 2024-11-30
+lastmod = 2024-12-01
 draft = false
 +++
 
@@ -116,10 +117,9 @@ goes](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-jus
 [Checked
 exceptions](https://en.wikipedia.org/wiki/Exception_handling_(programming)#Checked_exceptions)
 seem like a reasonable reaction to the issues with unchecked exceptions. But the
-implementation in Java is very flawed. It makes people (ab)use unchecked
-exceptions so much that there are entire discussions on using only unchecked
-exceptions, as does every other language with exceptions. I found the following
-root causes:
+implementation in Java is very flawed. There are entire discussions on using
+only unchecked exceptions, as does every other language with exceptions. I found
+the following root causes:
 
 - Throwing a new checked exception from a method is always a breaking change.
   Because of this, libraries with a stable API might decide to throw an
@@ -135,6 +135,17 @@ root causes:
   programmer to update the `throws` clause in *every* method all the way up the
   stack (until that exception is covered by a `catch` that swallows or wraps
   it).
+- Java's type system can't represent checked exceptions generically
+  [^worm-rabbit]. You can't have an interface that throws an unknown, generic
+  set of checked exceptions. An interface has to either:
+    1. Throw no checked exceptions. This forces the implementors to wrap and
+      rethrow these as an unchecked `RuntimeException`, losing type information.
+      [`Runnable.run`](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html#run--)
+      is an example of this.
+    2. Throw a specific, made-up list of checked exceptions that may not make
+      sense for all implementations. [`Appendable.append throws
+      IOException`](https://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html#append-char-)
+      is an example of this.
 
 ## Solutions in Rust
 
@@ -146,16 +157,21 @@ Rust gracefully solves these issues by having:
     - "Expected" return values that must be handled explicitly.
     - Unrecoverable[^recover-panic] panics that act as assertions and indicate a
       bug in the program.
-- Ergonomic sum types that are used consistently in the standard library.
+- Ergonomic [sum types](https://en.wikipedia.org/wiki/Tagged_union) that are
+  used consistently in the standard library.
 - A standard generic
   [`Result`](https://doc.rust-lang.org/std/result/enum.Result.htmlt) type with
   methods like
   [`map_err`](https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err)
   to help in typical scenarios like adding context to errors.
+- A rich type system that allows handling errors generically without losing type
+  information. The `E` in `Result<T, E>` is the prime example of this.
 - A compact [`?`
   operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
   to convert and propagate errors. It makes "dumb" error propagation as
-  ergonomic as when using exceptions.
+  ergonomic as when using exceptions. But it's also explicit and visible in a
+  code review. In Rust, the equivalent of the `f(g(x))` gotha would look like
+  `f(g(x)?)?`, clearly marking both points where a jump / early return happens.
 - Ergonomic, exhaustive pattern matching, complemented by:
     - More syntax sugar like [`if
       let`](https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html),
@@ -231,7 +247,6 @@ Good articles that I haven't hyperlinked anywhere else in the post:
   Part II](https://www.artima.com/articles/the-trouble-with-checked-exceptions)
 - [Either vs Exception Handling](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
 - [The Error Model](https://joeduffyblog.com/2016/02/07/the-error-model/)
-- [Error Handling in Rust](https://nrc.github.io/error-docs/intro.html)
 
 ## Discuss
 
@@ -245,6 +260,10 @@ Systems](https://www.eecg.toronto.edu/~yuan/papers/failure_analysis_osdi14.pdf)
 
 [^unchecked-pun]: Get it? Exceptions stay *unchecked*! 🥁
 
+[^worm-rabbit]: Shout-out to a reader on Reddit who has [pointed this
+out](https://www.reddit.com/r/rust/comments/1h3kdye/rust_solves_the_issues_with_exceptions/lzsnn7g/)!
+Originally, I missed this point and it wasn't in the post.
+
 [^recover-panic]: Actually, there are some workarounds, like using
 [std::panic::catch_unwind](https://doc.rust-lang.org/std/panic/fn.catch_unwind.html)
 or doing the work on a [separate
@@ -253,7 +272,8 @@ popular web frameworks do to avoid crashing the entire process when one of the
 requests panics. But the process still crashes if the target doesn't support
 unwinding or the project is built with [`panic =
 "abort"`](https://doc.rust-lang.org/cargo/reference/profiles.html#panic)
-setting.
+setting. It also crashes when [a destructor panics in an already-panicking
+thread](https://nrc.github.io/error-docs/rust-errors/panic.html#panic).
 
 [^dyn-err]: There are "easier" [alternative
 approaches](https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html)
