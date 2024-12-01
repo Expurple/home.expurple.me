@@ -155,8 +155,20 @@ Rust gracefully solves these issues by having:
   separation](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)
   between:
     - "Expected" return values that must be handled explicitly.
-    - Unrecoverable[^recover-panic] panics that act as assertions and indicate a
-      bug in the program.
+    - Unrecoverable[^recover-panic] panics that are used in one of the two ways:
+        1. Assertions that indicate a bug in the program when hit.
+        2. Intentional
+          "[`eprintln`](https://doc.rust-lang.org/std/macro.eprintln.html) +
+          cleanup +
+          [`exit`](https://doc.rust-lang.org/std/process/fn.exit.html)" for
+          cases where the author of the code made a judgement call that the
+          application can't possibly (want to) recover from the current
+          situation. E.g., most of the [Rust Standard
+          Library](https://doc.rust-lang.org/std/index.html) APIs panic on
+          [OOM](https://en.wikipedia.org/wiki/Out_of_memory) conditions because
+          it's geared towards application programming and treats OOM as a
+          situation that the application won't attempt to handle anyway.
+          [^oom-panic]
 - Ergonomic [sum types](https://en.wikipedia.org/wiki/Tagged_union) that are
   used consistently in the standard library.
 - A standard generic
@@ -274,6 +286,14 @@ unwinding or the project is built with [`panic =
 "abort"`](https://doc.rust-lang.org/cargo/reference/profiles.html#panic)
 setting. It also crashes when [a destructor panics in an already-panicking
 thread](https://nrc.github.io/error-docs/rust-errors/panic.html#panic).
+
+[^oom-panic]: This is controversial because it doesn't always provide equivalent
+non-panicking APIs for other use cases. It should accommodate low-level use
+cases better. But the existence of a convenient panicking API is OK. It's more
+appropriate for most applications. Most applications don't attempt to recover
+from OOM. A typical modern system with [memory
+overcommitment](https://en.wikipedia.org/wiki/Memory_overcommitment) will never
+report OOM on allocation anyway.
 
 [^dyn-err]: There are "easier" [alternative
 approaches](https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html)
