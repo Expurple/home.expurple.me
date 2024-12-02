@@ -1,7 +1,7 @@
 +++
 title = 'Rust Solves The Issues With Exceptions'
 date = 2024-11-30
-lastmod = 2024-12-01
+lastmod = 2024-12-02
 draft = false
 +++
 
@@ -182,9 +182,12 @@ Rust gracefully solves these issues by having:
   operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
   to convert and propagate errors. It makes "dumb" error propagation as
   ergonomic as when using exceptions. But it's also explicit and visible in a
-  code review. In Rust, the equivalent of the `f(g(x))` gotha would look like
-  `f(g(x)?)?`, clearly marking both points where a jump / early return happens.
-- Ergonomic, exhaustive pattern matching, complemented by:
+  code review. In Rust, the equivalent of that incorrect `f(g(x))` inside a
+  `try` block would look like `f(g(x)?)?`, clearly marking both points where a
+  jump / early return happens.
+- Ergonomic, exhaustive [pattern
+  matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html),
+  complemented by:
     - More syntax sugar like [`if
       let`](https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html),
       [`while
