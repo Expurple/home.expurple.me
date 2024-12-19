@@ -23,8 +23,8 @@ Hi! My name is Dmitrii Aleksandrov, I usually use `@expurple` handle.
 
 ## Programming
 
-I'm a backend developer for a living. I'm also enthusiastic about free software
-and the Rust ecosystem.
+I currently work as a backend team lead. I'm also enthusiastic about free
+software and the Rust ecosystem.
 
 - My resume is available on
   [LinkedIn](https://www.linkedin.com/in/dmitrii-aleksandrov-4a8356238/).
