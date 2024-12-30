@@ -26,7 +26,7 @@ removeAttribution = true
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
 showHeadingAnchors = true
 # Whether to enable search. Needs JSON output for this to work.
-enableSearch = false
+enableSearch = true
 
 # Site search engine verification tags.
 # [verification]
