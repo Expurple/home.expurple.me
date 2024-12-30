@@ -67,7 +67,7 @@ showTags = true
 # Whether to display next/previous article links in the article footer.
 showPagination = true
 # Whether to reverse the direction of next/previous article links.
-invertPagination = true
+invertPagination = false
 # Whether to display the table of contents on articles.
 showToC = true
 # Whether to open the Table of Contents when the page is loaded.
