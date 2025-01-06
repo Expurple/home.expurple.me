@@ -299,9 +299,12 @@ Good articles that I haven't hyperlinked anywhere else in the post:
 
 ## Discuss
 
-- [r/rust](https://www.reddit.com/r/rust/comments/1h3kdye/rust_solves_the_issues_with_exceptions/?)
-- [r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/comments/1h3khye/rust_solves_the_issues_with_exceptions/?)
-- [Hacker News](https://news.ycombinator.com/item?id=42283549)
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1h3kdye/rust_solves_the_issues_with_exceptions/?)
+- [{{< icon "reddit" >}}
+  r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/comments/1h3khye/rust_solves_the_issues_with_exceptions/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=42283549)
 
 [^failures-paper]: [Simple Testing Can Prevent Most Critical Failures: An
 Analysis of Production Failures in Distributed Data-intensive
