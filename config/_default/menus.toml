@@ -33,6 +33,12 @@ weight = 1
 # weight = 3
 
 [[main]]
+name = "rss"
+pre = "rss"
+url = "/posts/index.xml"
+weight = 3
+
+[[main]]
 name = "github"
 pre = "github"
 url = "https://github.com/expurple/home.expurple.me"
