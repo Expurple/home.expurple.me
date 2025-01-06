@@ -65,9 +65,9 @@ can't throw:
 f(g(x));
 ```
 
-Exceptions make this (and similar) patterns suffer so badly. They're not
-"uncommon" enough to justify the pain. And, as we'll see later, "common" error
-propagation can still be ergonomic without exceptions! They're not worth the
+Exceptions hurt most error handling patterns. Even very common ones, like
+rethrowing a wrapper exception. As you'll see in the next section, this pain
+isn't even necessary to have convenient propagation. Exceptions aren't worth the
 cost.
 
 {{< collapse
@@ -81,7 +81,43 @@ try {
     f(gException);                 // <- and then call `f` the second time! 💣
 }
 ```
+This is a great example of why automatic error propagation is tricky and may
+lead to bugs. In Rust, the equivalent code would look like `f(g(x)?)?`, clearly
+marking both points where a jump / early return happens and making the bug
+easier to notice.
 {{< /collapse >}}
+
+### Even "typical" error wrapping is unergonomic
+
+Exceptions always force you to write a whole special `try-catch` block that
+can't be abstracted away:
+
+```java
+try {
+    h();
+} catch (InnerException e) {
+    throw new WrapperException(e);
+}
+```
+
+Meanwhile, Rust's error propagation is abstracted into a [`?`
+operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
+that can perform the wrapping for you:
+
+```rust
+h()?;
+```
+
+This automatic conversion only works when `WrapperException` implements
+`From<InnerException>`. But this is the most common case. And even in other
+cases, this is still just a regular data transformation that can be expressed
+concisely using regular functions:
+
+```rust
+h().map_err(WrapperException)?;
+```
+
+That's all it is. Error wrapping doesn't have to be more complicated than that.
 
 ### Unchecked exceptions
 
@@ -180,11 +216,9 @@ Rust gracefully solves these issues by having:
   information. The `E` in `Result<T, E>` is the prime example of this.
 - A compact [`?`
   operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
-  to convert and propagate errors. It makes "dumb" error propagation as
-  ergonomic as when using exceptions. But it's also explicit and visible in a
-  code review. In Rust, the equivalent of that incorrect `f(g(x))` inside a
-  `try` block would look like `f(g(x)?)?`, clearly marking both points where a
-  jump / early return happens.
+  to convert and propagate errors. It makes error propagation as ergonomic as
+  when using exceptions. But it's also explicit and visible in a code review, as
+  we've discussed in the section about a tricky `f(g(x))`.
 - Ergonomic, exhaustive [pattern
   matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html),
   complemented by:
