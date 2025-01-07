@@ -15,34 +15,31 @@ documentation linked above.
 The site is deployed on Github Pages. See
 [.github/workflows/hugo.yaml](./.github/workflows/hugo.yaml) for details.
 
+For the comments to work, I also went through the [Giscus](https://giscus.app/)
+confuguration guide. It requires a public Github repository with
+[Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions)
+enabled. It can be any empty repository, even though I chose to use this main
+repository with the website sources.
+
+## Commenting on posts
+
+Comments are powered by [Github
+Discussions](https://github.com/Expurple/home.expurple.me/discussions) on the
+repo. To comment, you need a Github account.
+
+You can browse and comment either directly on Github, or using the
+[Giscus](https://giscus.app/)-based comment widget on the website. It's
+configured in
+[./layouts/partials/comments.html](./layouts/partials/comments.html).
+
 ## License
 
 The markdown writing in `content/` is licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-The software part is licensed under MIT License. That includes Hugo `config/`,
+The software part is licensed under the [MIT
+License](https://opensource.org/license/mit). That includes Hugo `config/`,
 custom templates, HTML, CSS, JS.
 
 I reserve all rights to the other materials I own, just in case I forget to
 explicitly license them here.
-
-### MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
