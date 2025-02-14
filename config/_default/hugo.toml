@@ -11,7 +11,7 @@ title = "Dmitrii Aleksandrov"
 theme = "kayal"
 
 # Number of articles per page in the listing.
-paginate = 5
+paginate = 9999
 
 # Enable processing of emojis in markdown.
 enableEmoji = true

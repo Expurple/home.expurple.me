@@ -80,7 +80,7 @@ showBreadcrumbs = false
 # List template settings
 [list]
 # Whether to group articles by year.
-groupByYear = false
+groupByYear = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
 # Whether to display pages as a card
