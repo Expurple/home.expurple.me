@@ -1,7 +1,7 @@
 +++
 title = 'Rust Solves The Issues With Exceptions'
 date = 2024-11-30
-lastmod = 2025-01-06
+lastmod = 2025-05-28
 draft = false
 +++
 
@@ -296,6 +296,12 @@ Good articles that I haven't hyperlinked anywhere else in the post:
   Part II](https://www.artima.com/articles/the-trouble-with-checked-exceptions)
 - [Either vs Exception Handling](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
 - [The Error Model](https://joeduffyblog.com/2016/02/07/the-error-model/)
+
+My later post, diving deeper into the topic of error handling in Rust:
+
+- [Why Use Structured Errors in Rust Applications?]({{< ref
+"/posts/why-use-structured-errors-in-rust-applications/"
+>}})
 
 ## Discuss
 
