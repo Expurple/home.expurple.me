@@ -1,6 +1,7 @@
 +++
 title = 'Why Use Structured Errors in Rust Applications?'
 date = 2025-05-28
+lastmod = 2025-05-28
 draft = false
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
@@ -174,6 +175,11 @@ from mine:
 - [Structure your Errors](https://jelv.is/blog/Structure-your-Errors/)
 
 I'll discuss mine in the next post in the series.
+
+## Discuss
+
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/?)
 
 [^structured]: "Structured errors" = non-opaque, non-string error types. Types
 that have a "shape".
