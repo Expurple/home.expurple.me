@@ -98,9 +98,9 @@ cardView = true
 # Term settings
 [term]
 # Whether to group articles by year.
-groupByYear = false
+groupByYear = true
 # Whether to display breadcrumbs
-showBreadcrumbs = false
+showBreadcrumbs = true
 # Whether to display pages as a card
 cardView = true
 # Whether to display RSS link

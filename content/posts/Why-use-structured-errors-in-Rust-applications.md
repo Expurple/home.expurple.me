@@ -1,5 +1,6 @@
 +++
 title = 'Why Use Structured Errors in Rust Applications?'
+tags = ['tech']
 date = 2025-05-28
 lastmod = 2025-05-28
 draft = false

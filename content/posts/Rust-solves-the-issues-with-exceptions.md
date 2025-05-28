@@ -1,5 +1,6 @@
 +++
 title = 'Rust Solves The Issues With Exceptions'
+tags = ['tech']
 date = 2024-11-30
 lastmod = 2025-05-28
 draft = false

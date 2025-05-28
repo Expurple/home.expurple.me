@@ -20,12 +20,12 @@ title = "Posts"
 url = "/posts/"
 weight = 1
 
-# [[main]]
-# name = "tags"
-# title = "Tags"
-# url = "/tags/"
-# weight = 2
-#
+[[main]]
+name = "tags"
+title = "Tags"
+url = "/tags/"
+weight = 2
+
 # [[main]]
 # name = "about"
 # title = "About"
