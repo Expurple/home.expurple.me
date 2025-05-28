@@ -83,9 +83,17 @@ try {
 }
 ```
 This is a great example of why automatic error propagation is tricky and may
-lead to bugs. In Rust, the equivalent code would look like `f(g(x)?)?`, clearly
-marking both points where a jump / early return happens and making the bug
-easier to notice.
+lead to bugs. In Rust, the equivalent of that buggy `f(g(x))` expression would
+look like `f(g(x)?)?`, clearly marking both points where a jump / early return
+happens and making the bug easier to notice.
+
+And this buggy expression wouldn't even compile! `f` accepts a `Result`, but in
+Rust, the "successful" value doen't implicitly convert into a `Result`. It needs
+to be explicitly wrapped: `f(Ok(g(x)?))?`. This is the real, working equivalent
+of the Java's `f(g(x))`. It looks ridiculous! It immediately indicates a fishy
+situation, and eventually leads us to the right solution: `f(g(x))?`. Thanks to
+[u/sasik520](https://www.reddit.com/user/sasik520) for [pointing this
+out](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/munxqay/).
 {{< /collapse >}}
 
 ### Even "typical" error wrapping is unergonomic
