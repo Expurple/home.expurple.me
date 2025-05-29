@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['tech']
 date = 2025-05-28
-lastmod = 2025-05-28
+lastmod = 2025-05-29
 draft = false
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
@@ -101,7 +101,7 @@ maintaining our own error types. But I found many other benefits of doing so:
     - You can implement something like this to have localized error messages:
       ```rust
       trait Localize {
-          fn localize(language: Language) -> String;
+          fn localize(&self, language: Language) -> String;
       }
       ```
 
@@ -109,6 +109,9 @@ maintaining our own error types. But I found many other benefits of doing so:
 
 Custom errors have their drawbacks:
 
+- It's more code and more types [^more-types].
+- To combat the boilerplate, you usually introduce a third-party dependency like
+  `thiserror`. [^raw-dyn-is-easier]
 - You need to put thought into structuring the code, because otherwise no one
   will find and reuse your existing error types.
 - You need to come up with names for error types and enum variants. These names
@@ -203,6 +206,14 @@ messages appear as annotations on the type.
 examples in this list are theoretical. I've never actually implemented these
 features. Please call me out if something's wrong with this section. Also, send
 concrete examples, if you know any!
+
+[^more-types]: IMO, it's totally worth it, because these types replace
+hand-written docs that list the possible errors. Type-checked docs are the best!
+
+[^raw-dyn-is-easier]: For dynamic errors, you usually introduce an
+`anyhow`-style dependency too. But if you want to avoid dependencies, then
+living with raw `Box<dyn Error>` is probably easier than hand-writing impls for
+all your custom types.
 
 [^tooling-issue]: Just like with the point about "jumping to the error message",
 one can argue that this is just a limitation of our current tooling, rather than
