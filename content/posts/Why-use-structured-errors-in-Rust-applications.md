@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['tech']
 date = 2025-05-28
-lastmod = 2025-05-29
+lastmod = 2025-05-30
 draft = false
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
@@ -122,9 +122,14 @@ Custom errors have their drawbacks:
   without jumping away from the code that I'm working on.
 - You also need to maintain these names as the codebase evolves! In my team, we
   often forgot to update the type/variant name when updating an error message.
+- You have to maintain the error types as your functions begin or stop returning
+  certain error variants. This adds maintainance overhead, but can be seen as an
+  advantage (see the points about code reviews, descriptive interfaces,
+  enforcing context on errors). I see a parallel with adding/removing `Result`
+  from the signature, which is widely considered a "necessary evil".
 - If an error enum is public in its crate, the compiler doesn't warn about
   unused variants. This means that sometimes unused variants may accumulate and
-  you need to manually trim them. [^tooling-issue]
+  you need to manually notice and trim them. [^tooling-issue]
 
 If your application is performance-sensitive, there are also performance
 considerations that don't present a clear winner:
@@ -144,6 +149,10 @@ considerations that don't present a clear winner:
   [zero-sized](https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts)
   unit structs to large flat collections of values that are waiting to be
   formatted. You may need to box and/or preformat your custom errors.
+
+Custom errors can even have surprising downsides in libraries (e.g.,
+[semver-related](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/muvblzn/)).
+But I don't duscuss libraries today!
 
 Assessing the tradeoff is up to you. Structured errors are worth it in my
 application.
