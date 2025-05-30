@@ -127,28 +127,33 @@ Custom errors have their drawbacks:
   advantage (see the points about code reviews, descriptive interfaces,
   enforcing context on errors). I see a parallel with adding/removing `Result`
   from the signature, which is widely considered a "necessary evil".
+- If your error is in a separate file, you jump back-and-forth between the files
+  when coding. [^error-placement]
 - If an error enum is public in its crate, the compiler doesn't warn about
   unused variants. This means that sometimes unused variants may accumulate and
   you need to manually notice and trim them. [^tooling-issue]
+- If you want your errors to include a backtrace, you need to explicitly add a
+  [`Backtrace`](https://doc.rust-lang.org/std/backtrace/struct.Backtrace.html)
+  field. [^dont-need-backtraces]
 
 If your application is performance-sensitive, there are also performance
 considerations that don't present a clear winner:
 
 - Should your errors be cheap to create? Are your errors frequently discarded
-  without ever being displayed? Are your errors displayed multiple times?
-  Currently, the contents of `anyhow::Error` are heap-allocated, the arguments
-  to `anyhow!` are [eagerly
+  without ever being displayed? Are your errors displayed multiple times? Do you
+  need a backtrace? Currently, the contents of `anyhow::Error` are
+  heap-allocated, the arguments to `anyhow!` are [eagerly
   formatted](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=41af825d68e5b1d7bafdbaa9d768787d),
   and a
   [backtrace](https://docs.rs/anyhow/1.0.95/anyhow/struct.Error.html#method.backtrace)
-  may be captured depending on environment variables [^backtrace-issues].
-  Typical custom errors avoid allocations and are lazily formatted.
-- Should your errors be small and cheap to propagate?
-  Currently, `anyhow::Error` is always a single pointer, while custom errors
-  range from
+  may be captured depending on environment variables[^backtrace-issues]. Typical
+  custom errors avoid allocations, are lazily formatted, and don't capture a
+  backtrace. But you can change all of that.
+- Should your errors be small and cheap to propagate? Currently, `anyhow::Error`
+  is always a single pointer, while custom errors range from
   [zero-sized](https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts)
-  unit structs to large flat collections of values that are waiting to be
-  formatted. You may need to box and/or preformat your custom errors.
+  unit structs to large collections of values that are waiting to be formatted.
+  You may need to box and/or preformat your custom errors.
 
 Custom errors can even have surprising downsides in libraries (e.g.,
 [semver-related](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/muvblzn/)).
@@ -224,9 +229,19 @@ hand-written docs that list the possible errors. Type-checked docs are the best!
 living with raw `Box<dyn Error>` is probably easier than hand-writing impls for
 all your custom types.
 
+[^error-placement]: I rarely hit this issue in practice, because I try to keep
+my error types local to the function. I'll discuss the factoring and placement
+of error types in the next post in the series.
+
 [^tooling-issue]: Just like with the point about "jumping to the error message",
 one can argue that this is just a limitation of our current tooling, rather than
 a fundamental flaw of custom enums.
+
+[^dont-need-backtraces]: I've never needed backtraces in my own errors, because
+good error messages with enough context are
+[enough](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/muoj5io/)
+to debug and reproduce the issue. And custom errors encourage thinking about
+context messages. Both you and your users benefit from this.
 
 [^backtrace-issues]: Currently, capturing backtraces is expensive. See
 [backtrace-related
