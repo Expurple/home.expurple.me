@@ -1,0 +1,5 @@
+{
+    // It produces false-positive warnings on footnotes:
+    // https://github.com/DavidAnson/vscode-markdownlint/issues/262
+    "markdown.validate.referenceLinks.enabled": "ignore",
+}

@@ -66,9 +66,11 @@ maintaining our own error types. But I found many other benefits of doing so:
 - When the error type is narrow and descriptive enough, you can understand the
   function just by looking at its signature, without even going to the error
   definition:
+  <!-- This comment acts as a blank line. Actual blank lines trigger https://github.com/mnjm/kayal/issues/62 -->
   ```rust
   fn foo(..) -> Result<.., TheOnlyPossibleFailure>
   ```
+  <!-- This comment acts as a blank line. Actual blank lines trigger https://github.com/mnjm/kayal/issues/62 -->
 - You don't repeat yourself when the same error is thrown from multiple places.
   Each error message is specified once when you define the type
   [^message-in-display]. This results in a more consistent user experience, as
@@ -99,6 +101,7 @@ maintaining our own error types. But I found many other benefits of doing so:
       to give your error an associated [HTTP status
       code](https://docs.rs/http/1.2.0/http/response/struct.Response.html#method.status).
     - You can implement something like this to have localized error messages:
+      <!-- This comment acts as a blank line. Actual blank lines trigger https://github.com/mnjm/kayal/issues/62 -->
       ```rust
       trait Localize {
           fn localize(&self, language: Language) -> String;

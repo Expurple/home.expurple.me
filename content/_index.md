@@ -5,7 +5,7 @@ draft = false
 
 Hi! My name is Dmitrii Aleksandrov, I usually use `@expurple` handle.
 
-# Trivia
+## Trivia
 
 - I always know my age, because I was born in early 2000 💡
 - I was born in [Pskov, Russia](https://en.wikipedia.org/wiki/Pskov) but moved
@@ -19,9 +19,9 @@ Hi! My name is Dmitrii Aleksandrov, I usually use `@expurple` handle.
 
 ---
 
-# Public activities
+## Public activities
 
-## Programming
+### Programming
 
 I currently work as a backend team lead. I'm also enthusiastic about free
 software and the Rust ecosystem.
@@ -36,16 +36,16 @@ software and the Rust ecosystem.
 - If you speak Russian, you're probably also on
   [Habr](https://habr.com/ru/users/Expurple/).
 
-## Music
+### Music
 
 I have a [YouTube channel](https://www.youtube.com/@expurple) where I upload
 from time to time.
 
-### Band history
+Band history:
 
 - Since 2024, I play drums in [Мало-Помалу](https://www.instagram.com/malo_pomalu_band/).
 - In 2019-2021, I played guitar in [Постоянные](https://www.youtube.com/@postoyannyye).
 
-## Blogging
+### Blogging
 
 Here I [post]({{< ref "/posts/" >}}) my thoughts on these topics and more.
