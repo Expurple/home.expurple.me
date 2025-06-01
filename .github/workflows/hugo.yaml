@@ -33,7 +33,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # The same as I have locally (from a non-LTS Ubuntu repo).
+      # The same version that I use locally.
       HUGO_VERSION: 0.131.0
     steps:
       - name: Install Hugo CLI
