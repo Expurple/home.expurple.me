@@ -19,12 +19,13 @@ Hi! My name is Dmitrii Aleksandrov, I usually use `@expurple` handle.
 
 ---
 
-## Public activities
+## Programming
 
-### Programming
+I enjoy computer programming, especially free software and the Rust ecosystem. I
+co-maintain [SeaORM](https://github.com/SeaQL/sea-orm) and
+[SeaQuery](https://github.com/SeaQL/sea-query).
 
-I currently work as a backend team lead. I'm also enthusiastic about free
-software and the Rust ecosystem.
+I currently work as a backend developer.
 
 - My resume is available on
   [LinkedIn](https://www.linkedin.com/in/dmitrii-aleksandrov-4a8356238/).
@@ -36,16 +37,14 @@ software and the Rust ecosystem.
 - If you speak Russian, you're probably also on
   [Habr](https://habr.com/ru/users/Expurple/).
 
-### Music
+## Music
 
 I have a [YouTube channel](https://www.youtube.com/@expurple) where I upload
-from time to time.
-
-Band history:
+from time to time. I also play in bands:
 
 - Since 2024, I play drums in [Мало-Помалу](https://www.instagram.com/malo_pomalu_band/).
 - In 2019-2021, I played guitar in [Постоянные](https://www.youtube.com/@postoyannyye).
 
-### Blogging
+## Blogging
 
 Here I [post]({{< ref "/posts/" >}}) my thoughts on these topics and more.
