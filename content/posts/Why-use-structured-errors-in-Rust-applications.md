@@ -201,6 +201,8 @@ I'll discuss mine in the next post in the series.
 
 - [{{< icon "reddit" >}}
   r/rust](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=44148708)
 
 [^structured]: "Structured errors" = non-opaque, non-string error types. Types
 that have a "shape".
