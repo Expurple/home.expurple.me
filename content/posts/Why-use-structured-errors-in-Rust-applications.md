@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['error handling', 'tech']
 date = 2025-05-28
-lastmod = 2025-05-30
+lastmod = 2025-06-05
 draft = false
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
@@ -201,6 +201,8 @@ I'll discuss mine in the next post in the series.
 
 - [{{< icon "reddit" >}}
   r/rust](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/?)
+- [{{< icon "reddit" >}}
+  r/programming](https://www.reddit.com/r/programming/comments/1l1nhwz/why_use_structured_errors_in_rust_applications/)
 - [{{< icon "hackernews" >}} Hacker
   News](https://news.ycombinator.com/item?id=44148708)
 
