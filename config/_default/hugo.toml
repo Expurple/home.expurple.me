@@ -42,3 +42,7 @@ buildFuture = true
 # [services]
 #   [services.googleAnalytics]
 #     ID = 'G-MEASUREMENT_ID'
+
+# Override the default Hugo taxonomies to get rid of categories.
+[taxonomies]
+tag = "tags"
