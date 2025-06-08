@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'tech']
 date = 2024-11-30
-lastmod = 2025-05-28
+lastmod = 2025-06-08
 draft = false
 +++
 
@@ -66,7 +66,7 @@ can't throw:
 f(g(x));
 ```
 
-Exceptions hurt most error handling patterns. Even very common ones, like
+Exceptions hurt most error-handling patterns. Even very common ones, like
 rethrowing a wrapper exception. As you'll see in the next section, this pain
 isn't even necessary to have convenient propagation. Exceptions aren't worth the
 cost.
@@ -90,11 +90,12 @@ look like `f(g(x)?)?`, clearly marking both points where a jump / early return
 happens and making the bug easier to notice.
 
 And this buggy expression wouldn't even compile! `f` accepts a `Result`, but in
-Rust, the "successful" value doen't implicitly convert into a `Result`. It needs
-to be explicitly wrapped: `f(Ok(g(x)?))?`. This is the real, working equivalent
-of the Java's `f(g(x))`. It looks ridiculous! It immediately indicates a fishy
-situation, and eventually leads us to the right solution: `f(g(x))?`. Thanks to
-[u/sasik520](https://www.reddit.com/user/sasik520) for [pointing this
+Rust, the "successful" value doesn't implicitly convert into a `Result`. It
+needs to be explicitly wrapped: `f(Ok(g(x)?))?`. This is the real, working
+equivalent of that Java's `f(g(x))`. It looks ridiculous! It immediately
+indicates a fishy situation, and eventually leads us to the right solution:
+`f(g(x))?`. Thanks to [u/sasik520](https://www.reddit.com/user/sasik520) for
+[pointing this
 out](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/munxqay/).
 
 {{< /collapse >}}
@@ -133,28 +134,31 @@ That's all it is. Error wrapping doesn't have to be more complicated than that.
 
 ### Unchecked exceptions
 
-Traditional unchecked exceptions are dynamically typed "result" values. Any
+Traditional unchecked exceptions are dynamically-typed "result" values. Any
 function can throw (or not throw) any exception. This makes programs
-unpredictable. Especially, the control flow. Almost any line of code can throw
-an exception, interrupt the current function, and start unwinding the stack.
-Potentially leaving your data in an inconsistent, half-way modified state. But
-programmers can't always keep [exception
-safety](https://en.wikipedia.org/wiki/Exception_safety) in mind and get it right
-on their first try. No one wraps every line in a `try-catch`. The result is
-unpredictable, unreliable programs with poor error handling. ["Unhappy
+unpredictable.
+
+Not only the "returned" error values are unpredictable, but especially the
+control flow. Remember that exceptions aren't returned and assigned as "normal"
+values. Almost any line of code can throw an exception, interrupt the current
+function, and start unwinding the stack. Potentially leaving your data in an
+inconsistent, half-way modified state. But programmers can't always keep
+[exception safety](https://en.wikipedia.org/wiki/Exception_safety) in mind and
+get it right on their first try. No one wraps every line in a `try-catch`. The
+result is unpredictable, unreliable programs with poor error handling. ["Unhappy
 paths"](https://en.wikipedia.org/wiki/Happy_path#Unhappy_path) are more
 important than they seem:
 
 > Almost all (92%) of the catastrophic system failures are the result of
 incorrect handling of non-fatal errors explicitly signaled in
-software.[^failures-paper]
+software. [^failures-paper]
 
 Unchecked exceptions aren't reflected in the type system, but they are still
 part of a function's contract. Many style guides recommend manually [documenting
 the
 exceptions](https://www.analyticsvidhya.com/blog/2024/01/python-docstrings/#h-sections-in-docstrings)
 that each public function throws. But soon these docs will get out-of-date
-because the compiler doesn't check[^unchecked-pun] the docs for you. Callers
+because the compiler doesn't check [^unchecked-pun] the docs for you. Callers
 can't rely on these docs' accuracy. If callers want to avoid surprise crashes,
 they always have to remember to manually `catch Exception`. And you know [how
 that
@@ -164,11 +168,25 @@ goes](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-jus
 
 [Checked
 exceptions](https://en.wikipedia.org/wiki/Exception_handling_(programming)#Checked_exceptions)
-seem like a reasonable reaction to the issues with unchecked exceptions. But the
-implementation in Java is very flawed. There are entire discussions on using
-only unchecked exceptions, as does every other language with exceptions. I found
-the following root causes:
+seem like a reasonable reaction to these issues with unchecked exceptions.
+Potential errors are included in the method's signature (as they should) and
+force the caller to acknowledge the possibility of an error (as they should).
 
+But the actual implementation in Java is very flawed. There are entire
+discussions on using only unchecked exceptions, as does every other language
+with exceptions. I found the following root causes:
+
+- Java's type system can't represent checked exceptions generically
+  [^worm-rabbit]. You can't have an interface that throws an unknown, generic
+  set of checked exceptions. An interface has to either:
+    1. Throw no checked exceptions. This forces the implementors to wrap and
+      rethrow these as an unchecked `RuntimeException`, losing type information.
+      [`Runnable.run`](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html#run--)
+      is an example of this.
+    2. Throw a specific, made-up list of checked exceptions that may not make
+      sense for all implementations. [`Appendable.append throws
+      IOException`](https://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html#append-char-)
+      is an example of this.
 - Throwing a new checked exception from a method is always a breaking change.
   Because of this, libraries with a stable API might decide to throw an
   unchecked wrapper instead. Callers can still catch and handle it, because...
@@ -183,42 +201,32 @@ the following root causes:
   programmer to update the `throws` clause in *every* method all the way up the
   stack (until that exception is covered by a `catch` that swallows or wraps
   it).
-- Java's type system can't represent checked exceptions generically
-  [^worm-rabbit]. You can't have an interface that throws an unknown, generic
-  set of checked exceptions. An interface has to either:
-    1. Throw no checked exceptions. This forces the implementors to wrap and
-      rethrow these as an unchecked `RuntimeException`, losing type information.
-      [`Runnable.run`](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html#run--)
-      is an example of this.
-    2. Throw a specific, made-up list of checked exceptions that may not make
-      sense for all implementations. [`Appendable.append throws
-      IOException`](https://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html#append-char-)
-      is an example of this.
+
+If we had a type system that solves these issues, checked exceptions would be a
+pretty good deal! Definitely better than unchecked exceptions that we see today
+in most popular languages.
+
+But even improved checked exceptions would still suffer from the general issues
+with exceptions (described in the [beginning](#exceptional-flow) of the post).
+Now, let's see how Rust solves all these issues for good.
 
 ## Solutions in Rust
 
 Rust gracefully solves these issues by having:
 
-- A [clear
-  separation](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)
-  between:
-    - "Expected" return values that must be handled explicitly.
-    - Unrecoverable[^recover-panic] panics that are used in one of the two ways:
-        1. Assertions that indicate a bug in the program when hit.
-        2. Intentional
-          "[`eprintln`](https://doc.rust-lang.org/std/macro.eprintln.html) +
-          cleanup +
-          [`exit`](https://doc.rust-lang.org/std/process/fn.exit.html)" for
-          cases where the author of the code made a judgement call that the
-          application can't possibly (want to) recover from the current
-          situation. E.g., most of the [Rust Standard
-          Library](https://doc.rust-lang.org/std/index.html) APIs panic on
-          [OOM](https://en.wikipedia.org/wiki/Out_of_memory) conditions because
-          it's geared towards application programming and treats OOM as a
-          situation that the application won't attempt to handle anyway.
-          [^oom-panic]
-- Ergonomic [sum types](https://en.wikipedia.org/wiki/Tagged_union) that are
-  used consistently in the standard library.
+- Errors as "normal" return values that work with "normal" assignments and
+  function calls.
+- ["Sum types"](https://en.wikipedia.org/wiki/Tagged_union) that allow
+  expressing things like "this is **either** a value **or** an error" or "this
+  is **one of** these possible errors". Rust
+  [`enum`](https://doc.rust-lang.org/rust-by-example/custom_types/enum.html)s
+  are like sealed interfaces, but much more ergonomic, efficient (no
+  indirection), and flexible (you can't implement interfaces for types that you
+  don't control).
+- Exhaustive [pattern
+  matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
+  that forces the programmer to handle every possible case (including errors, if
+  the possibility of an error is indicated in the type).
 - A standard generic
   [`Result`](https://doc.rust-lang.org/std/result/enum.Result.htmlt) type with
   methods like
@@ -229,21 +237,32 @@ Rust gracefully solves these issues by having:
 - A compact [`?`
   operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
   to convert and propagate errors. It makes error propagation as ergonomic as
-  when using exceptions. But it's also explicit and visible in a code review, as
-  we've discussed in the section about a tricky `f(g(x))`.
-- Ergonomic, exhaustive [pattern
-  matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html),
-  complemented by:
-    - More syntax sugar like [`if
-      let`](https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html),
-      [`while
-      let`](https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html),
-      [`let-else`](https://doc.rust-lang.org/rust-by-example/flow_control/let_else.html).
-    - The
-      [`#[non_exhaustive]`](https://doc.rust-lang.org/reference/attributes/type_system.html)
-      attribute to solve the API stability problem where necessary. It's not
-      unchecked, it still forces callers to handle unknown error variants from
-      the future! [^base-exception]
+  when using exceptions (and more ergonomic when you need to wrap the error).
+  But it's also explicit and visible in a code review, as we've discussed in the
+  section about a tricky `f(g(x))`.
+- More syntax sugar like [`if
+  let`](https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html),
+  [`while
+  let`](https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html),
+  [`let-else`](https://doc.rust-lang.org/rust-by-example/flow_control/let_else.html).
+- The
+  [`#[non_exhaustive]`](https://doc.rust-lang.org/reference/attributes/type_system.html)
+  attribute to solve the API stability problem where necessary. It's not
+  unchecked, it still forces callers to handle unknown error variants from the
+  future! [^base-exception]
+- Unrecoverable [^recover-panic]
+  ["panics"](https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html)
+  that are [clearly
+  separated](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)
+  from the "normal" value-based error handing (everything described above).
+  Panics are used as:
+    1. Assertions that indicate a bug in the program when hit.
+    2. Intentional
+       "[`eprintln`](https://doc.rust-lang.org/std/macro.eprintln.html) +
+       cleanup + [`exit`](https://doc.rust-lang.org/std/process/fn.exit.html)"
+       for cases where the author of the code made a judgement call that the
+       application (the caller) is unable (or wouldn't want to) recover from the
+       current situation. [^oom-panic]
 
 ## Rust's own issues
 
@@ -345,13 +364,18 @@ unwinding or the project is built with [`panic =
 setting. It also crashes when [a destructor panics in an already-panicking
 thread](https://nrc.github.io/error-docs/rust-errors/panic.html#panic).
 
-[^oom-panic]: This is controversial because it doesn't always provide equivalent
-non-panicking APIs for other use cases. It should accommodate low-level use
-cases better. But the existence of a convenient panicking API is OK. It's more
-appropriate for most applications. Most applications don't attempt to recover
-from OOM. A typical modern system with [memory
-overcommitment](https://en.wikipedia.org/wiki/Memory_overcommitment) will never
-report OOM on allocation anyway.
+[^oom-panic]: E.g., most of the [Rust Standard
+    Library](https://doc.rust-lang.org/std/index.html) APIs panic on
+    [OOM](https://en.wikipedia.org/wiki/Out_of_memory) conditions because it's
+    geared towards application programming and treats OOM as a situation that
+    the application won't attempt to handle anyway.
+
+    This is controversial because it doesn't always provide equivalent
+    non-panicking APIs for other use cases. It should accommodate low-level use
+    cases better. But the existence of a convenient panicking API is OK. It's
+    more appropriate for most applications. A typical modern system with [memory
+    overcommitment](https://en.wikipedia.org/wiki/Memory_overcommitment) will
+    never report OOM on allocation anyway.
 
 [^base-exception]: To be fair, the same result can be achieved in Java if you
     plan in advance and wrap all exceptions. You can throw exactly one checked
