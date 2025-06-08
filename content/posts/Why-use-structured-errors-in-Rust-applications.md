@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['error handling', 'tech']
 date = 2025-05-28
-lastmod = 2025-06-05
+lastmod = 2025-06-08
 draft = false
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
@@ -95,7 +95,7 @@ maintaining our own error types. But I found many other benefits of doing so:
     - You can implement
       [`std::process::Termination`](https://doc.rust-lang.org/stable/std/process/trait.Termination.html)
       to give your error an associated
-      [ExitCode](https://doc.rust-lang.org/stable/std/process/struct.ExitCode.html).
+      [`ExitCode`](https://doc.rust-lang.org/stable/std/process/struct.ExitCode.html).
     - You can implement
       [`axum::IntoResponse`](https://docs.rs/axum/0.8.1/axum/response/trait.IntoResponse.html)
       to give your error an associated [HTTP status
@@ -151,7 +151,7 @@ considerations that don't present a clear winner:
   [backtrace](https://docs.rs/anyhow/1.0.95/anyhow/struct.Error.html#method.backtrace)
   may be captured depending on environment variables[^backtrace-issues]. Typical
   custom errors avoid allocations, are lazily formatted, and don't capture a
-  backtrace. But you can change all of that.
+  backtrace. But you can configure all of that.
 - Should your errors be small and cheap to propagate? Currently, `anyhow::Error`
   is always a single pointer, while custom errors range from
   [zero-sized](https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts)
