@@ -1,5 +1,6 @@
 +++
 title = "Dmitrii Aleksandrov's home"
+lastmod = 2025-06-26
 draft = false
 +++
 
@@ -48,5 +49,3 @@ where I upload from time to time. I also play in bands:
 ## Blogging
 
 Here I [post]({{< ref "/posts/" >}}) my thoughts on these topics and more.
-
----

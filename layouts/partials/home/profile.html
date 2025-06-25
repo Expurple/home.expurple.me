@@ -1,0 +1,37 @@
+<!-- Forked from themes/kayal/layouts/partials/home/profile.html to add modification time metadata -->
+
+{{/* headline */}}
+{{ with .Site.Params.homepage.profile.headline }}
+  <span class="headline">{{ . | markdownify }}</span>
+{{ end }}
+
+{{/* image */}}
+{{ $img := .Site.Params.homepage.profile.image }}
+{{ $where := .Site.Params.homepage.profile.where }}
+{{ if $img }}
+  <div class="avatar {{ $where }}">
+  {{ $imgData := dict "Page" . "URL" $img "Alt" "Profile Image" "Size" "200x200" }}
+  {{ partial "image-renderer.html" $imgData }}
+  </div>
+{{ end }}
+
+{{/* Content from _index.html */}}
+{{ .Content }}
+
+{{/* Meta */}}
+{{ $dateModMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateModHuman := .Lastmod | time.Format "Jan 2, 2006" }}
+<hr>
+<div class="meta">
+  <p>
+    <span class="meta-icon">{{ partial "icon.html" "pencil" }}</span>
+    Last edited <time datetime="{{ $dateModMachine }}">{{ $dateModHuman }}</time>
+  </p>
+</div>
+<hr>
+
+{{ if .Site.Params.Social }}
+  <div class="socials">
+  {{ partial "home/socials.html" . }}
+  </div>
+{{ end }}
