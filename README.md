@@ -60,6 +60,12 @@ You can either browse and comment directly on Github, or use the
 [Giscus](https://giscus.app/) comment widget on the website. It's configured in
 [./layouts/partials/comments.html](./layouts/partials/comments.html).
 
+## My workflow
+
+Before committing changes, I run
+[./review_staged_changes.sh](./review_staged_changes.sh) to generate the old and
+the staged version of the site and then manually review the diff in VSCode.
+
 ## License
 
 The markdown writing in `content/` is licensed under

@@ -14,3 +14,6 @@ hugo.linux
 
 # I gitignore this globally, but want to track settings in this repo.
 !.vscode/settings.json
+
+# I use this folder for reviewing the diff in the generated files.
+/public.bak/
