@@ -107,17 +107,27 @@ cardView = true
 showRSS = true
 
 # Social links
-# [[social]]
-# name = "GitHub"
-# icon = "github"
-# url = "https://github.com/expurple"
-#
-# [[social]]
-# name = "Email"
-# icon = "email"
-# url = "mailto:adk2300@gmail.com"
-#
-# [[social]]
-# name = "Twitter / X"
-# icon = "x-twitter"
-# url = "https://x.com/sample"
+[[social]]
+name = "Email"
+icon = "envelope"
+url = "mailto:adk2300@gmail.com"
+
+[[social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/expurple/home.expurple.me"
+
+[[social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/dmitrii-aleksandrov-4a8356238/"
+
+[[social]]
+name = "Reddit"
+icon = "reddit"
+url = "https://www.reddit.com/user/Expurple/"
+
+[[social]]
+name = "YouTube"
+icon = "youtube"
+url = "https://www.youtube.com/@expurple"

@@ -48,3 +48,5 @@ from time to time. I also play in bands:
 ## Blogging
 
 Here I [post]({{< ref "/posts/" >}}) my thoughts on these topics and more.
+
+---
