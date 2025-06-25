@@ -1,0 +1,14 @@
+/*
+Add adequate spacing between metadata items on the post pages.
+This is based on https://stackoverflow.com/a/8184992/13622927.
+I googled it as "css space between elements".
+*/
+
+.meta-icon {
+    margin-right: 0.2em;
+    margin-left: 0.5em;
+}
+
+.meta-icon:first-of-type {
+    margin-left: 0;
+}
