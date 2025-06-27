@@ -17,6 +17,16 @@ hugo_generate_into() {
     hugo --destination "$1" --cleanDestinationDir
 }
 
+# For some reason, `git stash push --staged` SOMETIMES returns 0
+# even when it prints "No local changes to save" and doesn't create a stash.
+# Then the script continues and pops the wrong stashes.
+#
+# Here's a quick workaround to detect the lack of staged changes and prevent that.
+if git diff --staged --quiet ; then
+    echo "No staged changes to stash"
+    exit 1
+fi
+
 # Temporarily stash all changes, so that we can generate the previous version of the website.
 #
 # But first, create a separate stash with only staged changes,
