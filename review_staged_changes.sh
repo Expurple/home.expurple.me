@@ -9,8 +9,13 @@
 
 set -xeo pipefail
 
-old_build_dir=public.bak
-new_build_dir=public
+# Constants.
+head_build_dir=public.bak
+staged_build_dir=public
+
+hugo_generate_into() {
+    hugo --destination "$1" --cleanDestinationDir
+}
 
 # Temporarily stash all changes. We need to regenerate the previous version of the website.
 #
@@ -20,14 +25,14 @@ git stash --staged -m 'changes to be committed'
 git stash -u -m 'full local state'
 
 # Generate the old version.
-hugo --destination "$old_build_dir" --cleanDestinationDir
+hugo_generate_into "$head_build_dir"
 
 # Apply the stash with staged changes and stage them back.
 git stash pop 1
 git add --all
 
 # Generate the staged version.
-hugo --destination "$new_build_dir" --cleanDestinationDir
+hugo_generate_into "$staged_build_dir"
 
 # Restore all unstaged local changes.
 git stash pop 0
