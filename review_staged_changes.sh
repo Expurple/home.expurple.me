@@ -17,12 +17,13 @@ hugo_generate_into() {
     hugo --destination "$1" --cleanDestinationDir
 }
 
-# Temporarily stash all changes. We need to regenerate the previous version of the website.
+# Temporarily stash all changes, so that we can generate the previous version of the website.
 #
-# We also create a separate stash for only staged changes,
-# so that we can first apply back only these changes and generate the to-be-committed website.
-git stash --staged -m 'changes to be committed'
-git stash -u -m 'full local state'
+# But first, create a separate stash with only staged changes,
+# so that we can first apply only these changes and generate the to-be-committed website.
+# `--keep-index` is needed so that we always have something to stash into the "full" stash.
+git stash push --staged --keep-index -m 'changes to be committed'
+git stash push -u -m 'full local state'
 
 # Generate the old version.
 hugo_generate_into "$head_build_dir"
