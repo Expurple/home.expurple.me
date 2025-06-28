@@ -150,9 +150,9 @@ Lennon and McCartney taking the lead.
 Despite all of these complications, I prefer having a full band rather than a
 solo project. I prefer playing shows with live drums. I prefer not having to
 handle every single responsibility described in the
-[section](#my-2-years-in-постоянныеhttpsbandlinkpostoyannyye) about Постоянные.
-I prefer merging different creative ideas (even if not in equal proportions). I
-prefer spending time with people.
+[section](#my-2-years-in-постоянные) about Постоянные. I prefer merging
+different creative ideas (even if not in equal proportions). I prefer spending
+time with people.
 
 ---
 
