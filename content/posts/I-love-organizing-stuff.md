@@ -4,6 +4,7 @@ date = 2024-09-15
 lastmod = 2024-11-08
 draft = false
 showToC = false
+summary = 'I love storing things and then being able to access them later.'
 +++
 
 I love storing things and then being able to access them later. I love making

@@ -2,6 +2,7 @@
 title = "Dmitrii Aleksandrov's home"
 lastmod = 2025-06-28
 draft = false
+summary = "Dmitrii Aleksandrov's personal website"
 +++
 
 Hi! My name is Dmitrii Aleksandrov, I usually use `@expurple` handle.

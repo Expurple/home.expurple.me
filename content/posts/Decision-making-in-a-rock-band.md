@@ -3,6 +3,7 @@ title = 'Decision-Making in a Rock Band'
 date = 2024-11-07
 lastmod = 2024-11-23
 draft = false
+summary = 'How do you run a rock band and avoid endless arguing, frustration, and eventual breakup?'
 +++
 
 How do you run a rock band and avoid endless arguing, frustration, and eventual

@@ -3,6 +3,7 @@ title = 'The Optimal Post Size'
 date = 2025-01-10
 draft = false
 showToc = false
+summary = 'No more than 5 laptop screens / 2000 words.'
 +++
 
 No more than 5 laptop screens / 2000 words. This isn't a magical, scientifically
