@@ -2,7 +2,6 @@
 title = 'I Love Organizing Stuff'
 date = 2024-09-15
 lastmod = 2025-06-29
-draft = false
 showToC = false
 summary = 'I love storing things and then being able to access them later.'
 +++

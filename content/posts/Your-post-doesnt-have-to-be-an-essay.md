@@ -2,7 +2,6 @@
 title = "Your Post Doesn't Have to Be an Essay"
 date = 2024-12-30
 lastmod = 2025-06-29
-draft = false
 summary = "Short, subjective posts can still be high-quality and useful!"
 +++
 

@@ -3,7 +3,6 @@ title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'tech']
 date = 2024-11-30
 lastmod = 2025-06-29
-draft = false
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
 +++

@@ -2,7 +2,6 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 # TODO: tags
 date = {{ .Date }} # TODO: update to the final pub date
-draft = false
 # TODO: summary
 +++
 

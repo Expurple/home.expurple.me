@@ -2,7 +2,6 @@
 title = 'The Optimal Post Size'
 date = 2025-01-10
 lastmod = 2025-06-29
-draft = false
 showToc = false
 summary = 'No more than 5 laptop screens / 2000 words.'
 +++
