@@ -1,6 +1,6 @@
 # [home.expurple.me](https://home.expurple.me)
 
-The source code for my personal website.
+My personal website.
 
 ## Build
 
@@ -9,8 +9,7 @@ It's a static site built using [Hugo](https://gohugo.io/) with
 
 To build it, you only need to:
 
-1. `git clone` this repo with `--recursive` flag (to also download the theme as
-    a git submodule).
+1. `git clone` with `--recursive` flag (downloads the theme as a git submodule).
 
 2. [Install Hugo](https://gohugo.io/installation/) (at the right version! See
     below).
@@ -47,8 +46,8 @@ for details.
 For the comments to work, I also went through the [Giscus](https://giscus.app/)
 confuguration guide. It requires a public Github repository with
 [Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions)
-enabled. It can be any (even empty) repository, although I chose to use this
-main repository with the website sources.
+enabled. It can be any (even empty) repository. But I've simply connected this
+main repository.
 
 ## Commenting on posts
 
@@ -57,7 +56,7 @@ Discussions](https://github.com/Expurple/home.expurple.me/discussions) on the
 repo. To comment, you need a Github account.
 
 You can either browse and comment directly on Github, or use the
-[Giscus](https://giscus.app/) comment widget on the website. It's configured in
+[Giscus](https://giscus.app/) comment widget on my website. It's configured in
 [./layouts/partials/comments.html](./layouts/partials/comments.html).
 
 ## My workflow
