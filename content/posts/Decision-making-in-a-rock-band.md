@@ -1,7 +1,7 @@
 +++
 title = 'Decision-Making in a Rock Band'
 date = 2024-11-07
-lastmod = 2024-11-23
+lastmod = 2025-06-29
 draft = false
 summary = 'How do you run a rock band and avoid endless arguing, frustration, and eventual breakup?'
 +++
@@ -158,7 +158,7 @@ time with people.
 
 ## Related reading
 
-- [Anyone has experience with this kind of decision-making in a
-  band?](https://www.reddit.com/r/Bass/comments/80o1s8/anyone_has_experience_with_this_kind_of/)
-- [Starting a Band: Part 3 — Decision Making for Petulant
-  Children](https://tahoeonstage.com/backstage/starting-a-band-part-3/)
+- ["Anyone has experience with this kind of decision-making in a
+  band?"](https://www.reddit.com/r/Bass/comments/80o1s8/anyone_has_experience_with_this_kind_of/)
+- ["Starting a Band: Part 3 — Decision Making for Petulant
+  Children"](https://tahoeonstage.com/backstage/starting-a-band-part-3/)

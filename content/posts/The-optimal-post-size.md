@@ -1,6 +1,7 @@
 +++
 title = 'The Optimal Post Size'
 date = 2025-01-10
+lastmod = 2025-06-29
 draft = false
 showToc = false
 summary = 'No more than 5 laptop screens / 2000 words.'
@@ -34,10 +35,9 @@ I'm starting to get lost.
 Perhaps, that's when I approach the meme limit of [7
 objects](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two)
 (type and function definitions) that our short-term memory allegedly can hold.
-With its nested context, source code can overload you *fast*. See [Cognitive
-load
-is what matters](https://minds.md/zakirullin/cognitive), [Cyclomatic
-complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
+With its nested context, source code can overload you *fast*. See: ["Cognitive
+load is what matters"](https://minds.md/zakirullin/cognitive), ["Cyclomatic
+complexity"](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
 
 200 lines is also a common size for your first single-file applications as you
 learn. Going over this mark and dealing with a more complex project (and project
@@ -48,7 +48,7 @@ than the other things listed here.
 
 My issues with scrolling and search aren't exclusive to source files.
 
-E.g., I enjoyed reading ["My Experience of
+For example, I enjoyed reading ["My Experience of
 Writing"](https://gwern.net/about#my-experience-of-writing) on
 [gwern.net](https://gwern.net). But why is it just a section buried in the
 middle of that huge page that discusses [Markdown
@@ -78,10 +78,10 @@ don't make them as short and discrete as a blog post. Most books don't use
 hyperlinks and instead [inline](https://en.wikipedia.org/wiki/Inline_expansion)
 the same thing over and over. Most readers (including myself) are still tempted
 to think of a book as a whole, don't reference chapters separately, and are
-unlikely to stop and feel satisfied after reading a chapter. See also: [In
+unlikely to stop and feel satisfied after reading a chapter. See also: ["In
 praise of the hundred page
-idea](https://tracydurnell.com/2024/12/17/in-praise-of-the-hundred-page-idea/),
-[Why Not Write A Book](https://gwern.net/book-writing).
+idea"](https://tracydurnell.com/2024/12/17/in-praise-of-the-hundred-page-idea/),
+["Why Not Write A Book"](https://gwern.net/book-writing).
 
 ## And more
 

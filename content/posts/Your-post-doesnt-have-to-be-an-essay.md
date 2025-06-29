@@ -1,6 +1,7 @@
 +++
 title = "Your Post Doesn't Have to Be an Essay"
 date = 2024-12-30
+lastmod = 2025-06-29
 draft = false
 summary = "Short, subjective posts can still be high-quality and useful!"
 +++
@@ -28,7 +29,8 @@ often.
 
 Examples for inspiration:
 
-- [Concise explanations accelerate progress](https://stephango.com/concise)
-- [The beekeeper-keepers](https://stephango.com/honey)
-- [Everyone will not just](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-just)
+- ["Concise explanations accelerate progress"](https://stephango.com/concise)
+- ["The beekeeper-keepers"](https://stephango.com/honey)
+- ["Everyone will not
+  just"](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-just)
 - Any short quote that circulates online.

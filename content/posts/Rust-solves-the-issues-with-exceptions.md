@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'tech']
 date = 2024-11-30
-lastmod = 2025-06-08
+lastmod = 2025-06-29
 draft = false
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
@@ -198,7 +198,7 @@ with exceptions. I found the following root causes:
   and use them for recoverable errors! The `try-catch` mechanism is the same for
   all exceptions. You're always just one `extends RuntimeException` away from
   pleasing the compiler without a big refactoring. Which is needed, because...
-- [The lack of union types and type
+- The [lack of union types and type
   aliases](https://langdev.stackexchange.com/a/485/6542) infamously forces the
   programmer to update the `throws` clause in *every* method all the way up the
   stack (until that exception is covered by a `catch` that swallows or wraps
@@ -323,16 +323,16 @@ handling! 💥
 
 Good articles that I haven't hyperlinked anywhere else in the post:
 
-- [Checked exceptions: Java’s biggest
-  mistake](https://literatejava.com/exceptions/checked-exceptions-javas-biggest-mistake/)
-- [The Trouble with Checked Exceptions. A Conversation with Anders Hejlsberg,
-  Part II](https://www.artima.com/articles/the-trouble-with-checked-exceptions)
-- [Either vs Exception Handling](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
-- [The Error Model](https://joeduffyblog.com/2016/02/07/the-error-model/)
+- ["Checked exceptions: Java’s biggest
+  mistake"](https://literatejava.com/exceptions/checked-exceptions-javas-biggest-mistake/)
+- ["The Trouble with Checked Exceptions. A Conversation with Anders Hejlsberg,
+  Part II"](https://www.artima.com/articles/the-trouble-with-checked-exceptions)
+- ["Either vs Exception Handling"](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
+- ["The Error Model"](https://joeduffyblog.com/2016/02/07/the-error-model/)
 
 My later post, diving deeper into the topic of error handling in Rust:
 
-- [Why Use Structured Errors in Rust Applications?]({{< ref
+- ["Why Use Structured Errors in Rust Applications?"]({{< ref
   "/posts/why-use-structured-errors-in-rust-applications/" >}})
 
 ## Discuss
@@ -344,9 +344,9 @@ My later post, diving deeper into the topic of error handling in Rust:
 - [{{< icon "hackernews" >}} Hacker
   News](https://news.ycombinator.com/item?id=42283549)
 
-[^failures-paper]: [Simple Testing Can Prevent Most Critical Failures: An
+[^failures-paper]: ["Simple Testing Can Prevent Most Critical Failures: An
 Analysis of Production Failures in Distributed Data-intensive
-Systems](https://www.eecg.toronto.edu/~yuan/papers/failure_analysis_osdi14.pdf)
+Systems"](https://www.eecg.toronto.edu/~yuan/papers/failure_analysis_osdi14.pdf)
 
 [^unchecked-pun]: Get it? Exceptions stay *unchecked*! 🥁
 
