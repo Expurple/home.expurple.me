@@ -1,5 +1,5 @@
 +++
-title = "Dmitrii Aleksandrov's home"
+title = "Home"
 lastmod = 2025-06-30
 summary = "Dmitrii Aleksandrov's personal website"
 +++
