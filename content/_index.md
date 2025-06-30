@@ -1,6 +1,6 @@
 +++
 title = "Dmitrii Aleksandrov's home"
-lastmod = 2025-06-28
+lastmod = 2025-06-30
 summary = "Dmitrii Aleksandrov's personal website"
 +++
 
@@ -28,14 +28,10 @@ I enjoy computer programming, especially free software and the Rust ecosystem.
   [LinkedIn](https://www.linkedin.com/in/dmitrii-aleksandrov-4a8356238/).
 - I co-maintain [SeaORM](https://github.com/SeaQL/sea-orm) and
 [SeaQuery](https://github.com/SeaQL/sea-query), and occasionally contribute to
-the other projects that I use.
+other projects that I use.
 - I have accounts on [Github](https://github.com/Expurple/),
-  [Reddit](https://www.reddit.com/user/Expurple/),
-  [Hacker News](https://news.ycombinator.com/user?id=Expurple),
-  [Stack Overflow](https://stackoverflow.com/users/13622927/expurple),
-  [Codewars](https://www.codewars.com/users/Expurple/).
-- If you speak Russian, you're probably also on
-  [Habr](https://habr.com/ru/users/Expurple/).
+  [Reddit](https://www.reddit.com/user/Expurple/), and [Hacker
+  News](https://news.ycombinator.com/user?id=Expurple).
 
 ## Music
 
