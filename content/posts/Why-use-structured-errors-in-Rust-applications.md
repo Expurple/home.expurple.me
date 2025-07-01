@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['error handling', 'tech']
 date = 2025-05-28
-lastmod = 2025-06-29
+lastmod = 2025-07-01
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
 
@@ -182,19 +182,21 @@ I have to be *✨ agile ✨* in order to actually publish anything.
 
 ## Related reading
 
-Check out my first post about error handling:
-
-- ["Rust Solves The Issues With Exceptions"]({{< ref
-"/posts/rust-solves-the-issues-with-exceptions/" >}})
-
-I've also found these good posts about structured errors in Go and Haskell, but
+I've found these good posts about structured errors in Go and Haskell, but
 they're quite detailed and the actual approach in the code is quite different
 from mine:
 
 - ["Structured errors in Go"](https://southcla.ws/structured-errors-in-go)
 - ["Structure your Errors"](https://jelv.is/blog/Structure-your-Errors/)
 
-I'll discuss mine in the next post in the series.
+I'll discuss mine in a future post. See also my other posts about error
+handling:
+
+1. ["Rust Solves The Issues With Exceptions"]({{< ref
+  "/posts/rust-solves-the-issues-with-exceptions/" >}})
+2. **"Why Use Structured Errors in Rust Applications?"**
+3. ["Go Didn't Get Error Handling Right"]({{< ref
+   "/posts/go-did-not-get-error-handling-right/" >}})
 
 ## Discuss
 

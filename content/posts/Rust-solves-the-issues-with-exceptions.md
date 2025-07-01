@@ -12,9 +12,10 @@ A small topic that's too big to fit in a larger Rust post.
 ## Disclaimers
 
 - Rust isn't the only language that doesn't have exceptions and handles errors
-  by value. But error handling in languages like Go is flawed in its own way.
-  Here, I don't discuss these other implementations and use Rust as a specific
-  *successful* example of exception-free error handling.
+  by value. But error handling in languages like Go is [flawed in its own
+  way]({{< ref "/posts/go-did-not-get-error-handling-right/" >}}). Here, I don't
+  discuss these other implementations and use Rust as a specific *successful*
+  example of exception-free error handling.
 - I use Java for most examples of exceptions because it lets me discuss checked
   exceptions as well. For unchecked exceptions, this shouldn't matter because
   the implementation is very similar in most popular languages.
@@ -341,10 +342,13 @@ Good articles that I haven't hyperlinked anywhere else in the post:
 - ["Either vs Exception Handling"](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
 - ["The Error Model"](https://joeduffyblog.com/2016/02/07/the-error-model/)
 
-My later post, diving deeper into the topic of error handling in Rust:
+My other posts about error handling:
 
-- ["Why Use Structured Errors in Rust Applications?"]({{< ref
+1. **"Rust Solves The Issues With Exceptions"**
+2. ["Why Use Structured Errors in Rust Applications?"]({{< ref
   "/posts/why-use-structured-errors-in-rust-applications/" >}})
+3. ["Go Didn't Get Error Handling Right"]({{< ref
+   "/posts/go-did-not-get-error-handling-right/" >}})
 
 ## Discuss
 
