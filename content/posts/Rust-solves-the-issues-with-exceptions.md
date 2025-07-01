@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'tech']
 date = 2024-11-30
-lastmod = 2025-06-29
+lastmod = 2025-07-01
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
 +++
@@ -155,14 +155,13 @@ incorrect handling of non-fatal errors explicitly signaled in
 software. [^failures-paper]
 
 Unchecked exceptions aren't reflected in the type system, but they are still
-part of a function's contract. Many style guides recommend manually [documenting
-the
-exceptions](https://www.analyticsvidhya.com/blog/2024/01/python-docstrings/#h-sections-in-docstrings)
-that each public function throws. But soon these docs will get out-of-date
-because the compiler doesn't check [^unchecked-pun] the docs for you. Callers
-can't rely on these docs' accuracy. If callers want to avoid surprise crashes,
-they always have to remember to manually `catch Exception`. And you know [how
-that
+part of a function's contract. Many [style
+guides](https://www.analyticsvidhya.com/blog/2024/01/python-docstrings/#h-sections-in-docstrings)
+recommend manually documenting the exceptions that each public function throws.
+But soon these docs will get out-of-date because the compiler doesn't check
+[^unchecked-pun] the docs for you. Callers can't rely on these docs' accuracy.
+If callers want to avoid surprise crashes, they always have to remember to
+manually `catch Exception`. And you know [how that
 goes](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-just)...
 
 ### Checked exceptions in Java
@@ -170,7 +169,7 @@ goes](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-jus
 [Checked
 exceptions](https://en.wikipedia.org/wiki/Exception_handling_(programming)#Checked_exceptions)
 seem like a reasonable reaction to these issues with unchecked exceptions.
-Potential errors are included in the method's signature (as they should) and
+Potential errors are included in the method's signature (as they should be) and
 force the caller to acknowledge the possibility of an error (as they should).
 
 But the actual implementation in Java is very flawed. There are entire
@@ -197,7 +196,7 @@ with exceptions. I found the following root causes:
   and use them for recoverable errors! The `try-catch` mechanism is the same for
   all exceptions. You're always just one `extends RuntimeException` away from
   pleasing the compiler without a big refactoring. Which is needed, because...
-- The [lack of union types and type
+- The lack of [union types and type
   aliases](https://langdev.stackexchange.com/a/485/6542) infamously forces the
   programmer to update the `throws` clause in *every* method all the way up the
   stack (until that exception is covered by a `catch` that swallows or wraps
@@ -208,7 +207,7 @@ pretty good deal! Definitely better than unchecked exceptions that we see today
 in most popular languages.
 
 But even improved checked exceptions would still suffer from the general issues
-with exceptions (described in the [beginning](#exceptional-flow) of the post).
+with exceptions (described in the [beginning of the post](#exceptional-flow)).
 Now, let's see how Rust solves all these issues for good.
 
 ## Solutions in Rust
@@ -252,9 +251,9 @@ Rust gracefully solves these issues by having:
   unchecked, it still forces callers to handle unknown error variants from the
   future! [^base-exception]
 - Unrecoverable [^recover-panic]
-  ["panics"](https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html)
-  that are [clearly
-  separated](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)
+  [`panic`](https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html)s
+  that are clearly
+  [separated](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)
   from the "normal" value-based error handing (everything described above).
   Panics are used as:
     1. Assertions that indicate a bug in the program when hit.
@@ -281,13 +280,13 @@ inevitably brings in some new, different issues:
   tend to grow and be shared across multiple functions, where not every function
   actually returns every error variant. This undermines the benefits of
   exhaustive pattern matching and types-as-documentation, leading to...
-  [hand-written docs that list the errors that the function can
-  return](https://docs.rs/rust_xlsxwriter/0.79.4/rust_xlsxwriter/worksheet/struct.Worksheet.html#errors-1)!
-  Sounds familiar, huh? The experimental `terrors` library does a great job of
-  [describing this
+  [hand-written
+  docs](https://docs.rs/rust_xlsxwriter/0.79.4/rust_xlsxwriter/worksheet/struct.Worksheet.html#errors-1)
+  that list the errors that the function can return! Sounds familiar, huh? The
+  experimental `terrors` library does a great job of [describing this
   issue](https://github.com/komora-io/terrors?tab=readme-ov-file#motivation).
-- Moving around bloated return values and explicitly checking those [can
-  sometimes hurt
+- Moving around bloated return values and explicitly checking those can
+  sometimes [hurt
   performance](https://www.reddit.com/r/rust/comments/k5wk7r/is_rust_leaving_performance_on_the_table_by/gehe5b2/).
   But this can be solved by boxing the error, using output parameters or
   callbacks, or using global variables. Besides, `Result` and other enums are
@@ -355,14 +354,14 @@ out](https://www.reddit.com/r/rust/comments/1h3kdye/rust_solves_the_issues_with_
 Originally, I missed this point and it wasn't in the post.
 
 [^recover-panic]: Actually, there are some workarounds, like using
-[std::panic::catch_unwind](https://doc.rust-lang.org/std/panic/fn.catch_unwind.html)
+[`std::panic::catch_unwind`](https://doc.rust-lang.org/std/panic/fn.catch_unwind.html)
 or doing the work on a [separate
 thread](https://doc.rust-lang.org/std/thread/fn.spawn.html). That's what all
 popular web frameworks do to avoid crashing the entire process when one of the
 requests panics. But the process still crashes if the target doesn't support
 unwinding or the project is built with [`panic =
 "abort"`](https://doc.rust-lang.org/cargo/reference/profiles.html#panic)
-setting. It also crashes when [a destructor panics in an already-panicking
+setting. It also crashes when a destructor [panics in an already-panicking
 thread](https://nrc.github.io/error-docs/rust-errors/panic.html#panic).
 
 [^oom-panic]: E.g., most of the [Rust Standard
