@@ -159,10 +159,23 @@ part of a function's contract. Many [style
 guides](https://www.analyticsvidhya.com/blog/2024/01/python-docstrings/#h-sections-in-docstrings)
 recommend manually documenting the exceptions that each public function throws.
 But soon these docs will get out-of-date because the compiler doesn't check
-[^unchecked-pun] the docs for you. Callers can't rely on these docs' accuracy.
-If callers want to avoid surprise crashes, they always have to remember to
+[^unchecked-pun] the docs for you. Callers can't rely on the accuracy of these
+docs. If callers want to avoid surprise crashes, they always have to remember to
 manually `catch Exception`. And you know [how that
 goes](https://squareallworthy.tumblr.com/post/163790039847/everyone-will-not-just)...
+
+Implicit, unchecked contracts *really* mess with the future evolution of a
+codebase. In most cases, when you upgrade libraries, you don't re-read the
+documentation of every function that you call. But the set of exceptions could
+silently change. A non-throwing function could start throwing. Refactoring your
+own code could silently break your error handling. The compiler won't tell you
+anything! And manually verifying your refactoring is really hard because you
+can't use local reasoning. `catch` is non-local. Exceptions jump all across the
+layers of your app. You can't step through the layers and verify their
+"exception signatures" one by one, because **there are no signatures**.
+
+"Jumping all around the place" is the best way to describe unchecked exceptions.
+It's a glorified `goto` statement. Raw, unstructured and non-local.
 
 ### Checked exceptions in Java
 
