@@ -2,6 +2,7 @@
 title = "Go Didn't Get Error Handling Right"
 tags = ['error handling', 'tech']
 date = 2025-07-01
+lastmod = 2025-07-01
 showToc = false
 summary = "I've finally found a way to put this concisely!"
 +++
@@ -22,7 +23,7 @@ this concisely:
 
 ## Appendix
 
-In case you're wondering:
+To be clear:
 
 - It's a deep issue with the language capabilities that goes way beyond errors.
   It can't be fixed by just [changing the
