@@ -1,8 +1,8 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-# TODO: tags
+# TODO: tags = []
 date = {{ .Date }} # TODO: update to the final pub date
-# TODO: summary
+summary = "TODO:"
 +++
 
 <!-- TODO: prerequisites for reading? -->
