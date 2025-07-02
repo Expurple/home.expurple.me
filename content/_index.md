@@ -35,7 +35,7 @@ other projects that I use.
 
 ## Music
 
-I'm deep into music and play multiple instruments.
+I'm into music and play multiple instruments.
 
 - Since 2024, I play drums in
   [Мало-Помалу](https://www.instagram.com/malo_pomalu_band/).
