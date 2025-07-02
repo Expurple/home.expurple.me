@@ -1,5 +1,6 @@
 +++
 title = 'The Optimal Post Size'
+tags = ["writing"]
 date = 2025-01-10
 lastmod = 2025-06-29
 showToc = false
