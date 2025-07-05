@@ -2,6 +2,7 @@
 title = 'My Take on LLMs for Coding'
 tags = ["tech"]
 date = 2025-07-05
+showToc = false
 summary = "A short comment that gets to the point."
 +++
 
