@@ -1,6 +1,6 @@
 +++
 title = 'Rust Solves The Issues With Exceptions'
-tags = ['error handling', 'tech']
+tags = ['error handling', 'rust', 'tech']
 date = 2024-11-30
 lastmod = 2025-07-01
 openToC = true
