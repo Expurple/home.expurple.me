@@ -1,3 +1,7 @@
 .content {
   max-width: 90ch;
 }
+
+.taxny-card {
+  flex: 1 0;
+}
