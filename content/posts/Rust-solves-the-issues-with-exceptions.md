@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'rust', 'tech']
 date = 2024-11-30
-lastmod = 2025-07-01
+lastmod = 2025-07-09
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
 +++
@@ -68,11 +68,6 @@ can't throw:
 f(g(x));
 ```
 
-Exceptions hurt most error-handling patterns. Even very common ones, like
-rethrowing a wrapper exception. As you'll see in the next section, this pain
-isn't even necessary to have convenient propagation. Exceptions aren't worth the
-cost.
-
 {{< collapse
 summary="Can you guess why I used an intermediate variable instead of calling `f(g(x))` and `f(gException)` in `try-catch`?"
 open=false
@@ -104,8 +99,9 @@ out](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in
 
 ### Even "typical" error wrapping is unergonomic
 
-Exceptions always force you to write a whole special `try-catch` block that
-can't be abstracted away:
+Exceptions hurt most error-handling patterns. Even very common ones, like
+rethrowing a wrapper exception. You're always forced to write a whole special
+`try-catch` block that can't be abstracted away:
 
 ```java
 try {
@@ -115,21 +111,26 @@ try {
 }
 ```
 
-Meanwhile, Rust's error propagation is abstracted into a [`?`
-operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
-that can perform the wrapping for you:
+But this pain isn't even necessary to have convenient error progagation that
+exceptions are famous for!
+
+In Rust, the notion of "propagation" is abstracted into the [`?`
+operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator):
 
 ```rust
 h()?;
 ```
 
-This automatic conversion only works when `WrapperException` implements
-`From<InnerException>`. But this is the most common case. And even in other
-cases, this is still just a regular data transformation that can be expressed
-concisely using regular functions:
+It's very general. It can propagate nulls too. It can even wrap the error for
+you!
+
+The automatic conversion only works when `WrapperError` implements
+`From<InnerError>`. But this is the most common case. And even in other cases,
+this is still just a regular data transformation that can be expressed concisely
+using regular functions:
 
 ```rust
-h().map_err(WrapperException)?;
+h().map_err(WrapperError)?;
 ```
 
 That's all it is. Error wrapping doesn't have to be more complicated than that.
