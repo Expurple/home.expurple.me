@@ -18,28 +18,10 @@ weight = 1
 name = "posts"
 title = "Posts"
 url = "/posts/"
-weight = 1
+weight = 2
 
 [[main]]
 name = "tags"
 title = "Tags"
 url = "/tags/"
-weight = 2
-
-# [[main]]
-# name = "about"
-# title = "About"
-# url = "/about/"
-# weight = 3
-
-[[main]]
-name = "rss"
-pre = "rss"
-url = "/posts/index.xml"
 weight = 3
-
-[[main]]
-name = "github"
-pre = "github"
-url = "https://github.com/expurple/home.expurple.me"
-weight = 4

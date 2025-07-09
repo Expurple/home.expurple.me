@@ -11,3 +11,10 @@
 .taxny-card {
   flex: 1 0;
 }
+
+/* Inspired by the footer at https://matklad.github.io.
+ * Underlined links grab too much attention that the footer doesn't deserve.
+ */
+footer a:not(:hover) {
+  border-bottom: none;
+}
