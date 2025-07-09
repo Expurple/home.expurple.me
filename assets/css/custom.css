@@ -1,15 +1,15 @@
-/* this change was rejected in upstream Kayal:
- * https://github.com/mnjm/kayal/pull/68
- */
-.content {
-  max-width: 90ch;
-}
+/****************** Waiting to be merged into upstream Kayal ******************/
 
-/* waiting to merge this into upstream Kayal:
- * https://github.com/mnjm/kayal/pull/69
- */
+/* https://github.com/mnjm/kayal/pull/69 */
 .taxny-card {
   flex: 1 0;
+}
+
+/********************** My permanent custom modifications *********************/
+
+/* Proposed and rejected in Kayal: https://github.com/mnjm/kayal/pull/68 */
+.content {
+  max-width: 90ch;
 }
 
 /* Inspired by the footer at https://matklad.github.io.
