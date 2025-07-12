@@ -15,6 +15,13 @@ pre code {
 
 /********************** My permanent custom modifications *********************/
 
+/* Keep the profile picture close to the top (apart from the margin around).
+ * Kayal artificially moves it down just a little, for some reason.
+ */
+.avatar {
+  margin-top: 0px;
+}
+
 /* Proposed and rejected in Kayal: https://github.com/mnjm/kayal/pull/68 */
 .content {
   max-width: 90ch;
