@@ -74,8 +74,8 @@ open=false
 >}}
 
 ```java
-try {
-    f(g(x));                       // <- If `f` also happens to throw `GException` and does this when `g` didn't...
+try {                              // <- If `f` also happens to throw `GException`
+    f(g(x));                       // <- and does this when `g` didn't...
 } catch (GException gException) {  // <- then this will catch `GException` from `f`...
     f(gException);                 // <- and then call `f` the second time! 💣
 }
