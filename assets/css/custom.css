@@ -9,6 +9,9 @@
 code {
   white-space: nowrap;
 }
+pre code {
+  white-space: inherit;
+}
 
 /********************** My permanent custom modifications *********************/
 
