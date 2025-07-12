@@ -5,6 +5,11 @@
   flex: 1 0;
 }
 
+/* https://github.com/mnjm/kayal/pull/71 */
+code {
+  white-space: nowrap;
+}
+
 /********************** My permanent custom modifications *********************/
 
 /* Proposed and rejected in Kayal: https://github.com/mnjm/kayal/pull/68 */
