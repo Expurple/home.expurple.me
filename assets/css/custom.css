@@ -24,7 +24,7 @@ pre code {
 
 /* Proposed and rejected in Kayal: https://github.com/mnjm/kayal/pull/68 */
 .content {
-  max-width: 90ch;
+  max-width: 84ch;
 }
 
 /* Inspired by the footer at https://matklad.github.io.
