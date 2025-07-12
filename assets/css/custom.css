@@ -5,11 +5,6 @@
   flex: 1 0;
 }
 
-/* https://github.com/mnjm/kayal/pull/70 */
-.icon {
-  margin-right: 0.2em;
-}
-
 /********************** My permanent custom modifications *********************/
 
 /* Proposed and rejected in Kayal: https://github.com/mnjm/kayal/pull/68 */
