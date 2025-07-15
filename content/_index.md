@@ -35,7 +35,8 @@ other projects that I use.
 
 ## Music
 
-I'm into music and play multiple instruments.
+I'm into music and play multiple instruments. You can see my favorite bands
+[here]({{< ref "/inspiration/music/" >}}).
 
 - Since 2024, I play drums in
   [Мало-Помалу](https://www.instagram.com/malo_pomalu_band/).
