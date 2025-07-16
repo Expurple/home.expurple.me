@@ -1,6 +1,6 @@
 +++
 title = "Home"
-lastmod = 2025-06-30
+lastmod = 2025-07-15
 summary = "Dmitrii Aleksandrov's personal website"
 +++
 
