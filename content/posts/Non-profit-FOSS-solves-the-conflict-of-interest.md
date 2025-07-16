@@ -2,6 +2,7 @@
 title = 'Non-Profit FOSS Solves the Conflict of Interest'
 tags = ["tech"]
 date = 2025-07-16
+lastmod = 2025-07-16
 summary = "The developers have no incentive to enshittify the app!"
 +++
 
@@ -87,6 +88,17 @@ strategies:
 - ["Introducing Sponsorware: How A Small Open Source Package Increased My Salary
   By $11k in Two Days"](https://calebporzio.com/sponsorware)
 - ["Alternatives to Open Source"](https://simonsafar.com/2024/source_available/)
+
+## Discuss
+
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=44583953)
+- [{{< icon "reddit" >}}
+  r/foss](https://www.reddit.com/r/foss/comments/1m1gxeq/nonprofit_foss_solves_the_conflict_of_interest/?)
+- [{{< icon "reddit" >}}
+  r/kde](https://www.reddit.com/r/kde/comments/1m1gv4h/nonprofit_foss_solves_the_conflict_of_interest/?)
+- [{{< icon "reddit" >}}
+  r/linux](https://www.reddit.com/r/linux/comments/1m1gwv1/nonprofit_foss_solves_the_conflict_of_interest/?)
 
 [^maintainer-disagreement]: Also, a FOSS license doesn't guarantee that the
     authors will always agree with you on the best direction for the project!
