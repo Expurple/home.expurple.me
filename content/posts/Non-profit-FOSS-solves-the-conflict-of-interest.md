@@ -82,6 +82,10 @@ Regular SaaS startups manage to survive on comparable sums, after all.
 
 ## Related reading
 
+- ["In the long run, GPL code becomes
+  irrelevant"](https://josephg.com/blog/in-the-long-run-gpl-code-becomes-irrelevant/)
+  (as does properietary code. Follow the link for details)
+
 Interesting ideas of alternative, FOSS-adjacent licenses or monetization
 strategies:
 
