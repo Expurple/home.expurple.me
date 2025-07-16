@@ -2,13 +2,14 @@
 title = 'My Take on LLMs for Coding'
 tags = ["tech"]
 date = 2025-07-05
+lastmod = 2025-07-16
 showToc = false
-summary = "A short comment that gets to the point."
+summary = "Use LLMs for small, tedious tasks that you can review quickly."
 +++
 
 Originally written as an [HN
 comment](https://news.ycombinator.com/item?id=44472692) on ["The Rise of
-Whatever"](https://eev.ee/blog/2025/07/03/the-rise-of-whatever/) [^recommended-reading]:
+Whatever"](https://eev.ee/blog/2025/07/03/the-rise-of-whatever/):
 
 > I disagree on LLMs being "worse than useless".
 >
@@ -50,12 +51,10 @@ your own opinion that's actually based on reality.
 - ["Why LLM-Powered Programming is More Mech Suit Than Artificial
   Human"](https://matthewsinclair.com/blog/0178-why-llm-powered-programming-is-more-mech-suit-than-artificial-human)
 - ["The Rise of Whatever"](https://eev.ee/blog/2025/07/03/the-rise-of-whatever/)
-  (the article that I'm commenting on)
+  (the article that I'm commenting on, highly recommended)
 
 ## Discuss
 
 - [{{< icon "hackernews" >}} My original comment on Hacker
   News](https://news.ycombinator.com/item?id=44472692) (the entire comment
   section is good)
-
-[^recommended-reading]: I highly recommend reading that.
