@@ -1,7 +1,7 @@
 +++
 title = 'Music'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-07-15
+lastmod = 2025-07-18
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -343,7 +343,7 @@ yet)
 
 Макулатура
 
-слушай экзорцист (I'm not sure if it's even uploaded anywhere other than vk.com)
+слушай экзорцист
 
 ## Metal
 
