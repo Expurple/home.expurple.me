@@ -2,6 +2,7 @@
 title = 'Dear null'
 tags = ["tech"]
 date = 2025-07-22
+lastmod = 2025-07-22
 showToc = false
 summary = "Yesterday, I got an SMS from my insurance company."
 +++
@@ -64,3 +65,8 @@ be convenient for unit tests or omitting optional fields... just write a
 function or a builder that does the same thing. There is no such thing as a
 "default customer". Don't lie to yourself, to your colleagues, and to the
 compiler. And don't let Golang gaslight you.
+
+## Discuss
+
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=44646691)
