@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-07-18
+lastmod = 2025-07-26
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -344,6 +344,8 @@ yet)
 Макулатура
 
 слушай экзорцист
+
+Dr. Dre - 2001 (have only listened to that one yet)
 
 ## Metal
 
