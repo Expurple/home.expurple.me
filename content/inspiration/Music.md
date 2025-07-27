@@ -309,7 +309,7 @@ Pendulum
 
 Wargasm (UK)
 
-Kailey Bailey (Half Life 2 OST)
+Kailey Bailey (Half-Life 2 OST)
 
 💿 The Prodigy (selectively across the entire discography)
 
