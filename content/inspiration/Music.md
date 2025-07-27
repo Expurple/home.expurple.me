@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-07-26
+lastmod = 2025-07-27
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -306,6 +306,8 @@ Noisia
 B-Complex
 
 Pendulum
+
+Wargasm
 
 💿 The Prodigy (selectively across the entire discography)
 
