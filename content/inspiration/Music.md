@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-07-27
+lastmod = 2025-07-28
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -309,7 +309,7 @@ Pendulum
 
 Wargasm (UK)
 
-Kailey Bailey (Half-Life 2 OST)
+Kelly Bailey (Half-Life 2 OST)
 
 💿 The Prodigy (selectively across the entire discography)
 
