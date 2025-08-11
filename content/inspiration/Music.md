@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-07-28
+lastmod = 2025-08-11
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -190,6 +190,8 @@ Cyndi Lauper - She's So Unusual (haven't listened to the other ones yet)
 Skeletal Family
 
 Joy Division - Unknown Pleasures
+
+O. Children - O. Children
 
 Glaze - Wasted Mind
 
