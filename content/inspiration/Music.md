@@ -436,6 +436,8 @@ Lamb Of God (until Wrath, inclusively)
 💿 Pantera (starting with Cowboys From Hell. My favorite is probably Far Beyond
 Driven, by a small margin)
 
+The Great Southern (Pantera tribute on YouTube)
+
 Cannibal Corpse
 
 Dark Funeral - Where Shadows Forever Reign (haven't listened to the other stuff)
