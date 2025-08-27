@@ -161,7 +161,7 @@ Crumb
 
 Melody's Echo Chamber - Melody's Echo Chamber
 
-💿 Tame Impala (my favorites are until Currents, inclusively)
+💿 Tame Impala (everything)
 
 Temples (haven't listened much)
 
