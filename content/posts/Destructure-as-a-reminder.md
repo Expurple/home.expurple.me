@@ -2,6 +2,7 @@
 title = 'Destructure as a Reminder'
 tags = ["rust", "tech"]
 date = 2025-08-29
+lastmod = 2025-08-29
 summary = "A design pattern for long-lived Rust codebases."
 +++
 
