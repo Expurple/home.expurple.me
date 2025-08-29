@@ -157,6 +157,11 @@ Man, I love exhaustiveness checks.
 is a good resource. Leave a comment if you liked my trick and want me to
 contribute it!
 
+## Discuss
+
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1n3hczf/destructure_as_a_reminder/?)
+
 [^filter-must-filter]: Granted, in this example it's obvious that *a filter must
 do the filtering*, that such method already exists somewhere, and that we must
 find it. But in more complex cases, multiple such methods could exist, and they
