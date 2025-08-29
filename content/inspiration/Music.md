@@ -80,6 +80,8 @@ the later ones yet)
 
 Jeff Beck (live shows)
 
+Yussef Dayes (I've only seen a few live videos on YouTube)
+
 Benny Greb (live videos on YouTube)
 
 Matt McGuire (drumming videos on YouTube)
@@ -222,7 +224,9 @@ Lovesliescrushing - Blowyelashwish (haven't listened to the other ones much)
 
 Ride - Going Blank Again (haven't listened to the other ones much)
 
-💿 Постоянные (until 2021, inclusively)
+💿 Постоянные (mostly until 2021, inclusively)
+
+💿 Мало-помалу
 
 💿 Foo Fighters (mostly the first three albums, selected hits after that)
 
