@@ -158,11 +158,12 @@ Man, I love exhaustiveness checks.
 ## Related reading
 
 ["Rust Design Patterns"](https://rust-unofficial.github.io/patterns/intro.html)
-is a good resource. Leave a comment if you liked my trick and want me to
-contribute it!
+is a good resource. It lists many similar useful techniques.
 
 ## Discuss
 
+- [{{< icon "github" >}} Proposal to add to "Rust Design
+  Patterns"](https://github.com/rust-unofficial/patterns/issues/452)
 - [{{< icon "reddit" >}}
   r/rust](https://www.reddit.com/r/rust/comments/1n3hczf/destructure_as_a_reminder/?)
 - [{{< icon "reddit" >}}
