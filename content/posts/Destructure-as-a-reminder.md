@@ -149,7 +149,7 @@ times](https://www.reddit.com/r/rust/comments/1lcskhg/rust_compiler_performance_
 
 But this pattern has its place. `thiserror` is very nice. It achieves a similar
 result to our destructuring, enforcing an `#[error(..)]` annotation on every
-field and raising a compile error otherwise.
+enum variant and raising a compile error otherwise.
 
 Man, I love exhaustiveness checks.
 
