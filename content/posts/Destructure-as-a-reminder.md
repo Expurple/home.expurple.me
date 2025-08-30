@@ -2,7 +2,7 @@
 title = 'Destructure as a Reminder'
 tags = ["rust", "tech"]
 date = 2025-08-29
-lastmod = 2025-08-29
+lastmod = 2025-08-30
 summary = "A design pattern for long-lived Rust codebases."
 +++
 
@@ -145,7 +145,7 @@ To me, this just screams overengineering. And [proc macros are bad for compile
 times](https://www.reddit.com/r/rust/comments/1lcskhg/rust_compiler_performance_survey_2025_rust_blog/my5ktej/).
 
 But this pattern has its place. `thiserror` is very nice. It achieves a similar
-result to our destructuring, enforcing an `#[error](..)` annotation on every
+result to our destructuring, enforcing an `#[error(..)]` annotation on every
 field and raising a compile error otherwise.
 
 Man, I love exhaustiveness checks.
@@ -162,6 +162,10 @@ contribute it!
 
 - [{{< icon "reddit" >}}
   r/rust](https://www.reddit.com/r/rust/comments/1n3hczf/destructure_as_a_reminder/?)
+- [{{< icon "reddit" >}}
+  r/programming](https://www.reddit.com/r/programming/comments/1n3jx7b/destructure_as_a_reminder/)
+- [{{< icon "discourse" >}}
+  users.rust-lang.org](https://users.rust-lang.org/t/destructure-as-a-reminder/133495)
 
 [^filter-must-filter]: Granted, in this example it's obvious that *a filter must
 do the filtering*, that such method already exists somewhere, and that we must
