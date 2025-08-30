@@ -395,6 +395,8 @@ Breaking Benjamin (selected songs)
 
 Evanescence (selectively)
 
+Disturbed
+
 Slipknot (mostly, the first two albums)
 
 💿 Amatory (my favorite is Инстинкт Оберечённых, by a small margin)
