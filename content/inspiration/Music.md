@@ -323,6 +323,8 @@ Fatboy Slim - You've Come a Long Way Baby
 
 💿 Jojo Mayer & Nerve (live videos on YouTube, starting from around 2015)
 
+Paradis - Recto Verso (haven't listened to the other ones yet)
+
 Innerpartysystem - Innerpartysystem
 
 Die Antwoord (music videos)
