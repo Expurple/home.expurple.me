@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-08-11
+lastmod = 2025-09-18
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -324,6 +324,8 @@ Fatboy Slim - You've Come a Long Way Baby
 💿 Jojo Mayer & Nerve (live videos on YouTube, starting from around 2015)
 
 Paradis - Recto Verso (haven't listened to the other ones yet)
+
+Justice - Hyperdrama (haven't listened to the other ones much)
 
 Innerpartysystem - Innerpartysystem
 
