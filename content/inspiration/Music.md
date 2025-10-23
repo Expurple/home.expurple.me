@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-09-18
+lastmod = 2025-10-23
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -163,7 +163,7 @@ Crumb
 
 Melody's Echo Chamber - Melody's Echo Chamber
 
-💿 Tame Impala (everything)
+💿 Tame Impala (excluding Deadbeat)
 
 Temples (haven't listened much)
 
