@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-10-23
+lastmod = 2025-11-17
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -120,6 +120,8 @@ ABBA
 Daft Punk - Random Access Memories
 
 ELO - Time (haven't listened to the other ones much)
+
+Angelo Badalamenti - Twin Peaks OST
 
 Hiatus Kaiyote - Choose Your Weapon (haven't listened to the other ones much)
 
@@ -252,6 +254,8 @@ TK from Ling tosite sigure
 
 Sonic Youth
 
+Mumm-Ra - These Things Move in Threes
+
 Autolux
 
 Blur (the 90s, ofc)
@@ -322,6 +326,8 @@ Kelly Bailey (Half-Life 2 OST)
 Fatboy Slim - You've Come a Long Way Baby
 
 💿 Jojo Mayer & Nerve (live videos on YouTube, starting from around 2015)
+
+Lena Raine - Celeste OST
 
 Paradis - Recto Verso (haven't listened to the other ones yet)
 
