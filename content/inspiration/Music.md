@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-11-17
+lastmod = 2025-11-30
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -78,6 +78,8 @@ David Gilmour - Rattle That Lock (barely listened to the other ones)
 Steely Dan - Pretzel Logic (the earlier ones are good too, haven't listened to
 the later ones yet)
 
+Augustus Pablo – King Tubbys Meets Rockers Uptown
+
 Jeff Beck (live shows)
 
 Yussef Dayes (I've only seen a few live videos on YouTube)
@@ -95,7 +97,7 @@ Simon Phillips (I've only really listened to Protocol II)
 The Mountain Goats - Goths (I went through the discography once, the others
 didn't get me like this one)
 
-Band Of Skulls (I've only listened to a few songs, but they slap)
+Band Of Skulls (a few songs slap hard)
 
 Morphine
 
