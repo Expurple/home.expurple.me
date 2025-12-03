@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-11-30
+lastmod = 2025-12-03
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -149,9 +149,9 @@ Mario DiSanto (get started on YouTube)
 
 Louis Cole (get started on YouTube)
 
-KNOWER (get started on YouTube)
+💿 KNOWER (get started on YouTube. KNOWER FOREVER is my favorite)
 
-ClownC0re (get started on YouTube)
+💿 ClownC0re (get started on YouTube)
 
 Owane (music videos on YouTube)
 
@@ -317,7 +317,7 @@ Noisia
 
 B-Complex
 
-Pendulum
+💿 Pendulum (they are consistently good)
 
 Wargasm (UK)
 
@@ -325,7 +325,8 @@ Kelly Bailey (Half-Life 2 OST)
 
 💿 The Prodigy (selectively across the entire discography)
 
-Fatboy Slim - You've Come a Long Way Baby
+💿 Fatboy Slim - You've Come a Long Way Baby (the other ones don't do that for
+me)
 
 💿 Jojo Mayer & Nerve (live videos on YouTube, starting from around 2015)
 
