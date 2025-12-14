@@ -2,6 +2,7 @@
 title = 'Fearless Website Updates With Hugo'
 tags = ['tech']
 date = 2025-12-14
+lastmod = 2025-12-14
 summary = 'Managing dependencies, reviewing generated HTML, diffing staged changes in 0.3 seconds.'
 +++
 
@@ -212,6 +213,17 @@ Rust's "fearless" development philosophy:
   Rust"](https://blog.rust-lang.org/2015/04/10/Fearless-Concurrency/)
 - ["Toward fearless cargo
   update"](https://predr.ag/blog/toward-fearless-cargo-update/)
+
+## Discuss
+
+- [{{< icon "discourse" >}}
+  discourse.gohugo.io](https://discourse.gohugo.io/t/fearless-website-updates-with-hugo/56371)
+- [{{< icon "reddit" >}}
+  r/gohugo](https://www.reddit.com/r/gohugo/comments/1pm88e6/fearless_website_updates_with_hugo/?)
+- [{{< icon "reddit" >}}
+  r/webdev](https://www.reddit.com/r/webdev/comments/1pm880s/fearless_website_updates_with_hugo/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=46261383)
 
 [^tweak-later]: At least, initially! I've edited some styles and templates
 since.
