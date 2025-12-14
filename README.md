@@ -25,13 +25,14 @@ To deal with breaking changes in Hugo, I only use and support one specific
 version at time.
 
 For reliable builds, I recommend installing the same Hugo version as I use.
-Check `HUGO_VERSION` in
-[.github/workflows/hugo.yaml](./.github/workflows/hugo.yaml).
+Check the version in the [`.hvm`](./.hvm) file.
 
-Choose an installation method that **won't** auto-update Hugo. For example, pin
-it in your package manager, or sidestep the package manager and download the
-binary from [Github releases](https://github.com/gohugoio/hugo/releases). This
-is the right way to install unstable software.
+Choose an installation method that **won't** auto-update Hugo. If you use
+[`hvm`](https://github.com/jmooring/hvm) (recommended), it will use the right
+Hugo version automatically. Alternatively, you can pin Hugo in your package
+manager, or sidestep the package manager and download the Hugo binary from
+[Github releases](https://github.com/gohugoio/hugo/releases). This is the right
+way to install unstable software.
 
 Hugo has three ["editions"](https://gohugo.io/installation/linux/#editions) with
 different feature sets. The minimal "standard" edition is enough to build this
@@ -72,7 +73,7 @@ The markdown writing in `content/` is licensed under
 
 The software part is licensed under the [MIT
 License](https://opensource.org/license/mit). That includes Hugo `config/`,
-custom templates, HTML, CSS, JS.
+custom templates, HTML, CSS, JS, shell scripts.
 
 I reserve all rights to the other materials I own, just in case I forget to
 explicitly license them here.

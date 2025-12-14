@@ -7,6 +7,9 @@
 #
 # After running this script, I manually review the diff in VSCode.
 
+# `hvm` support: load the `hugo` alias from `~/.bash_aliases`.
+source ~/.bash_aliases
+
 set -xeo pipefail
 
 # Constants.
