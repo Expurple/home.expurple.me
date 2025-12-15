@@ -2,7 +2,7 @@
 title = 'Fearless Website Updates With Hugo'
 tags = ['tech']
 date = 2025-12-14
-lastmod = 2025-12-14
+lastmod = 2025-12-15
 summary = 'Managing dependencies, reviewing generated HTML, diffing staged changes in 0.3 seconds.'
 +++
 
@@ -194,6 +194,9 @@ examples](https://discourse.gohugo.io/t/hugo-should-validate-output-formats/5524
 and so on. I'll post an update if I make any progress on that.
 
 ---
+
+**EDIT:** I did. See ["Fearless Hugo Updates With HVM"]({{< ref
+"/posts/fearless-hugo-updates-with-hvm/" >}}).
 
 ## Related reading
 
