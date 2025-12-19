@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-12-03
+lastmod = 2025-12-19
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -237,6 +237,8 @@ Ride - Going Blank Again (haven't listened to the other ones much)
 ПТВП (haven't listened to them much, but the music is good, feels alive)
 
 Blink-182 (the hits)
+
+Karen Dió - My World
 
 There For Tomorrow
 
