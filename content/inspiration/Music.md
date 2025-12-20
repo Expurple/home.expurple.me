@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-12-19
+lastmod = 2025-12-20
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -260,7 +260,7 @@ Sonic Youth
 
 Mumm-Ra - These Things Move in Threes
 
-Autolux
+💿 Autolux (everything)
 
 Blur (the 90s, ofc)
 
