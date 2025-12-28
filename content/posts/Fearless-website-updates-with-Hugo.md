@@ -144,6 +144,8 @@ has become one of my main guiding principles.
 
 ## Outstanding problems / future ideas
 
+<div class="spaced-ul">
+
 - Better automation for Hugo updates. Even though Hugo updates are one of the
   main problems described in this post, my script doesn't support this scenario
   yet. Both Hugo invocations in the script use the same global Hugo version. For
@@ -180,6 +182,8 @@ has become one of my main guiding principles.
   Because I don't want to bump the date on *every* change to the source file
   (like adding a new tag or changing markdown formatting).
 - I'm yet to take a look at the biggest Hugo websites and see what they do.
+
+</div>
 
 [Making a website is
 hard](https://blog.cathoderaydude.com/doku.php?id=blog:making_a_website_is_hard).

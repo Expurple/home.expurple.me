@@ -23,6 +23,20 @@ main ul.lst li div.lst-a {
 
 /********************** My permanent custom modifications *********************/
 
+/* Allow to explicitly add the extra spacing from https://github.com/mnjm/kayal/pull/76
+ * to a list without `<p>` tags, by wrapping it in a `<div class="spaced-ul">`.
+ *
+ * This is useful for lists where each item is a single long paragraph,
+ * and Hugo doesn't generate any `<p>` tags.
+ *
+ * TODO: After I remove the annoying whitespace node mentioned in https://github.com/mnjm/kayal/pull/75,
+ * I can start using actual paragraphs (explicitly wrapping the first list item in `<p>`)
+ * instead of this rule.
+ */
+main div.spaced-ul ul li + li {
+  margin-top: 7px;
+}
+
 /* Keep the profile picture close to the top (apart from the margin around).
  * Kayal artificially moves it down just a little, for some reason.
  */

@@ -11,6 +11,8 @@ A small topic that's too big to fit in a larger Rust post.
 
 ## Disclaimers
 
+<div class="spaced-ul">
+
 - Rust isn't the only language that doesn't have exceptions and handles errors
   by value. But error handling in languages like Go is [flawed in its own
   way]({{< ref "/posts/go-did-not-get-error-handling-right/" >}}). Here, I don't
@@ -21,6 +23,8 @@ A small topic that's too big to fit in a larger Rust post.
   the implementation is very similar in most popular languages.
 - I ignore third-party libraries and discuss common, "idiomatic" mechanisms
   provided by the language.
+
+</div>
 
 ## Issues with exceptions
 
@@ -191,6 +195,8 @@ But the actual implementation in Java is very flawed. There are entire
 discussions on using only unchecked exceptions, as does every other language
 with exceptions. I found the following root causes:
 
+<div class="spaced-ul">
+
 - Java's type system can't represent checked exceptions generically
   [^worm-rabbit]. You can't have an interface that throws an unknown, generic
   set of checked exceptions. An interface has to either:
@@ -217,6 +223,8 @@ with exceptions. I found the following root causes:
   stack (until that exception is covered by a `catch` that swallows or wraps
   it).
 
+</div>
+
 If we had a type system that solves these issues, checked exceptions would be a
 pretty good deal! Definitely better than unchecked exceptions that we see today
 in most popular languages.
@@ -228,6 +236,8 @@ Now, let's see how Rust solves all these issues for good.
 ## Solutions in Rust
 
 Rust gracefully solves these issues by having:
+
+<div class="spaced-ul">
 
 - Errors as "normal" return values that work with "normal" assignments and
   function calls.
@@ -279,11 +289,15 @@ Rust gracefully solves these issues by having:
        application (the caller) is unable (or wouldn't want to) recover from the
        current situation. [^oom-panic]
 
+</div>
+
 ## Rust's own issues
 
 It would be unfair to end the post here and declare that Rust has the best error
 handling because it solves all issues found in another language. Rust's approach
 inevitably brings in some new, different issues:
+
+<div class="spaced-ul">
 
 - When your function can encounter multiple different errors *and* you want to
   preserve concrete type information [^dyn-err], Rust makes you manually define
@@ -325,6 +339,8 @@ inevitably brings in some new, different issues:
   [capturing](https://doc.rust-lang.org/std/backtrace/struct.Backtrace.html#method.capture)
   backtraces where necessary; longer debugging sessions. On the other hand,
   debugging runtime issues comes up way less often in Rust 🙃
+
+</div>
 
 In my opinion, these issues aren't nearly as fundamental and annoying as the
 issues with exceptions. Now I *can* conclude that Rust has the best error

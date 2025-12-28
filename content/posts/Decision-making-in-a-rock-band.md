@@ -32,6 +32,8 @@ finding photographers, videographers, album cover artists...
 
 So far, sounds great. But, on the other hand:
 
+<div class="spaced-ul">
+
 - I was often mad at rehearsals and had to explain some things that seemed
   obvious to me.
 - When re-watching our shows, I was often more disappointed in my bandmates'
@@ -50,6 +52,8 @@ So far, sounds great. But, on the other hand:
   the other guys' songs. But I didn't like those and ended up leaving the band.
   And afterwards, I also took an extended break from music during the *next* 2
   years.
+
+</div>
 
 ## Pondering
 

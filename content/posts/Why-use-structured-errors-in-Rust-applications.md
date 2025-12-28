@@ -15,6 +15,8 @@ the code easier to reason about and maintain down the road.
 In 2025, this is the conventional error handling practice in the Rust community.
 Let's quickly recap the main ideas:
 
+<div class="spaced-ul">
+
 - Libraries should expose error types that provide as much information as
   possible. This allows the callers to detect and handle specific error
   conditions. A specific error code is more useful than "Oops, something went
@@ -42,6 +44,8 @@ Let's quickly recap the main ideas:
   dynamic error type, along with helper methods that make dealing with it even
   easier than returning a string. [^error-string]
 
+</div>
+
 If you google "error handling in Rust", the typical introductory posts are going
 to start with the basics of `panic`, `Option` and `Result`, then explain these
 two libraries, give this rule of thumb to choose bethween them, show some code,
@@ -55,6 +59,8 @@ maintaining it full-time for over a year. It mostly follows the same pattern of
 conditions. The main benefit of structured errors is not applicable. It sounds
 like we should be using something like `anyhow` instead of spending time on
 maintaining our own error types. But I found many other benefits of doing so:
+
+<!-- TODO: I want to add spacing between the outer list items, but not the inner list items -->
 
 - Custom error types allow you to see all potential failure modes of a function
   at a glance, without (recursively) inspecting its implementation or
@@ -111,6 +117,8 @@ maintaining our own error types. But I found many other benefits of doing so:
 
 Custom errors have their drawbacks:
 
+<div class="spaced-ul">
+
 - It's more code and more types [^more-types].
 - To combat the boilerplate, you usually introduce a third-party dependency like
   `thiserror`. [^raw-dyn-is-easier]
@@ -138,8 +146,12 @@ Custom errors have their drawbacks:
   [`Backtrace`](https://doc.rust-lang.org/std/backtrace/struct.Backtrace.html)
   field. [^dont-need-backtraces]
 
+</div>
+
 If your application is performance-sensitive, there are also performance
 considerations that don't present a clear winner:
+
+<div class="spaced-ul">
 
 - Should your errors be cheap to create? Are your errors frequently discarded
   without ever being displayed? Are your errors displayed multiple times? Do you
@@ -156,6 +168,8 @@ considerations that don't present a clear winner:
   [zero-sized](https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts)
   unit structs to large collections of values that are waiting to be formatted.
   You may need to box and/or preformat your custom errors.
+
+</div>
 
 Custom errors can even have surprising downsides in libraries (e.g.,
 [semver-related](https://www.reddit.com/r/rust/comments/1kx0ak8/why_use_structured_errors_in_rust_applications/muvblzn/)).
