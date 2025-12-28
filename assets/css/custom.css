@@ -1,5 +1,13 @@
 /****************** Waiting to be merged into upstream Kayal ******************/
 
+/* https://github.com/mnjm/kayal/pull/76 */
+main ul li:has(p) + li:has(p) {
+  margin-top: 7px;
+}
+main ul li p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* https://github.com/mnjm/kayal/pull/75 */
 main ul li p:first-of-type {
   display: inline;
