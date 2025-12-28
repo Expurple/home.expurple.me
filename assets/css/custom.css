@@ -21,6 +21,11 @@ main ul.lst li div.lst-a {
   flex: 1 0;
 }
 
+/* https://github.com/mnjm/kayal/pull/77 */
+.taxny-card {
+  white-space: nowrap;
+}
+
 /********************** My permanent custom modifications *********************/
 
 /* Allow to explicitly add the extra spacing from https://github.com/mnjm/kayal/pull/76
