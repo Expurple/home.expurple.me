@@ -35,7 +35,7 @@ main ul.lst li div.lst-a {
  * and Hugo doesn't generate any `<p>` tags.
  *
  * TODO: After I remove the annoying whitespace node mentioned in https://github.com/mnjm/kayal/pull/75,
- * I can start using actual paragraphs (explicitly wrapping the first list item in `<p>`)
+ * I can start using actual paragraphs (by putting a blank line between list items)
  * instead of this rule.
  */
 main div.spaced-ul ul li + li {
