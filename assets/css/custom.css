@@ -1,30 +1,6 @@
 /****************** Waiting to be merged into upstream Kayal ******************/
 
-/* https://github.com/mnjm/kayal/pull/76 */
-main ul li:has(p) + li:has(p) {
-  margin-top: 7px;
-}
-main ul li p:last-of-type {
-  margin-bottom: 0;
-}
 
-/* https://github.com/mnjm/kayal/pull/75 */
-main ul li p:first-of-type {
-  display: inline;
-}
-main ul.lst li div.lst-a {
-  display: inline;
-}
-
-/* https://github.com/mnjm/kayal/pull/69 */
-.taxny-card {
-  flex: 1 0;
-}
-
-/* https://github.com/mnjm/kayal/pull/77 */
-.taxny-card {
-  white-space: nowrap;
-}
 
 /********************** My permanent custom modifications *********************/
 
@@ -34,7 +10,7 @@ main ul.lst li div.lst-a {
  * This is useful for lists where each item is a single long paragraph,
  * and Hugo doesn't generate any `<p>` tags.
  *
- * TODO: After I remove the annoying whitespace node mentioned in https://github.com/mnjm/kayal/pull/75,
+ * TODO: After we fix https://github.com/mnjm/kayal/issues/78,
  * I can start using actual paragraphs (by putting a blank line between list items)
  * instead of this rule.
  */
