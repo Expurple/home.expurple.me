@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2025-12-20
+lastmod = 2026-01-10
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -77,6 +77,8 @@ David Gilmour - Rattle That Lock (barely listened to the other ones)
 
 Steely Dan - Pretzel Logic (the earlier ones are good too, haven't listened to
 the later ones yet)
+
+James Brown (selected songs with famous drums)
 
 Augustus Pablo – King Tubbys Meets Rockers Uptown
 
