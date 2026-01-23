@@ -118,9 +118,9 @@ especially if you work in another language:
 - Your colleague could use old-school text search. <br><sup>(Let's hope that all
   relevant code is in a single repo, and there aren't too many irrelevant
   results or non-matching camelCase/kebab-case/whatever variations of the
-  identifier[^case-variations])</sup>
-- Instead of destructuring, you could write a proc macro. Let's
-  expand[^expand-pun] on this a little.
+  identifier [^case-variations])</sup>
+- Instead of destructuring, you could write a proc macro. Let's expand
+  [^expand-pun] on this a little.
 
 If the handling of each field is extremely repetitive and you don't need unique
 logic for every field, you can write a proc macro that defines the function for

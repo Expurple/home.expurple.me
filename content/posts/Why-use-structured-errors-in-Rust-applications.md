@@ -95,7 +95,7 @@ maintaining our own error types. But I found many other benefits of doing so:
   review, etc.
 
 - Custom error types can be enriched with additional data and
-  functionality[^theoretical-impls]:
+  functionality [^theoretical-impls]:
     - You can slap on
       [`#[derive(Serialize)]`](https://docs.rs/serde/1.0.219/serde/trait.Serialize.html)
       to log/return nested JSON data along with an error.
@@ -164,9 +164,9 @@ considerations that don't present a clear winner:
   formatted](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=41af825d68e5b1d7bafdbaa9d768787d),
   and a
   [backtrace](https://docs.rs/anyhow/1.0.95/anyhow/struct.Error.html#method.backtrace)
-  may be captured depending on environment variables[^backtrace-issues]. Typical
-  custom errors avoid allocations, are lazily formatted, and don't capture a
-  backtrace. But you can configure all of that.
+  may be captured depending on environment variables [^backtrace-issues].
+  Typical custom errors avoid allocations, are lazily formatted, and don't
+  capture a backtrace. But you can configure all of that.
 
 - Should your errors be small and cheap to propagate? Currently, `anyhow::Error`
   is always a single pointer, while custom errors range from
