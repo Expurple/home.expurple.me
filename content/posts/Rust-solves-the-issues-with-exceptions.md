@@ -11,20 +11,18 @@ A small topic that's too big to fit in a larger Rust post.
 
 ## Disclaimers
 
-<div class="spaced-ul">
-
 - Rust isn't the only language that doesn't have exceptions and handles errors
   by value. But error handling in languages like Go is [flawed in its own
   way]({{< ref "/posts/go-did-not-get-error-handling-right/" >}}). Here, I don't
   discuss these other implementations and use Rust as a specific *successful*
   example of exception-free error handling.
+
 - I use Java for most examples of exceptions because it lets me discuss checked
   exceptions as well. For unchecked exceptions, this shouldn't matter because
   the implementation is very similar in most popular languages.
+
 - I ignore third-party libraries and discuss common, "idiomatic" mechanisms
   provided by the language.
-
-</div>
 
 ## Issues with exceptions
 
@@ -195,8 +193,6 @@ But the actual implementation in Java is very flawed. There are entire
 discussions on using only unchecked exceptions, as does every other language
 with exceptions. I found the following root causes:
 
-<div class="spaced-ul">
-
 - Java's type system can't represent checked exceptions generically
   [^worm-rabbit]. You can't have an interface that throws an unknown, generic
   set of checked exceptions. An interface has to either:
@@ -208,22 +204,23 @@ with exceptions. I found the following root causes:
       sense for all implementations. [`Appendable.append throws
       IOException`](https://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html#append-char-)
       is an example of this.
+
 - Throwing a new checked exception from a method is always a breaking change.
   Because of this, libraries with a stable API might decide to throw an
   unchecked wrapper instead. Callers can still catch and handle it, because...
+
 - Unchecked exceptions are recoverable. No wonder people go against the
   ["official"
   recommendations](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html)
   and use them for recoverable errors! The `try-catch` mechanism is the same for
   all exceptions. You're always just one `extends RuntimeException` away from
   pleasing the compiler without a big refactoring. Which is needed, because...
+
 - The lack of [union types and type
   aliases](https://langdev.stackexchange.com/a/485/6542) infamously forces the
   programmer to update the `throws` clause in *every* method all the way up the
   stack (until that exception is covered by a `catch` that swallows or wraps
   it).
-
-</div>
 
 If we had a type system that solves these issues, checked exceptions would be a
 pretty good deal! Definitely better than unchecked exceptions that we see today
@@ -237,10 +234,9 @@ Now, let's see how Rust solves all these issues for good.
 
 Rust gracefully solves these issues by having:
 
-<div class="spaced-ul">
-
 - Errors as "normal" return values that work with "normal" assignments and
   function calls.
+
 - ["Sum types"](https://en.wikipedia.org/wiki/Tagged_union) that allow
   expressing things like "this is **either** a value **or** an error" or "this
   is **one of** these possible errors". Rust
@@ -248,33 +244,40 @@ Rust gracefully solves these issues by having:
   are like sealed interfaces, but much more ergonomic, efficient (no
   indirection), and flexible (you can't implement interfaces for types that you
   don't control).
+
 - Exhaustive [pattern
   matching](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
   that forces the programmer to handle every possible case (including errors, if
   the possibility of an error is indicated in the type).
+
 - A standard generic
   [`Result`](https://doc.rust-lang.org/std/result/enum.Result.htmlt) type with
   methods like
   [`map_err`](https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err)
   to help in typical scenarios like adding context to errors.
+
 - A rich type system that allows handling errors generically without losing type
   information. The `E` in `Result<T, E>` is the prime example of this.
+
 - A compact [`?`
   operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator)
   to convert and propagate errors. It makes error propagation as ergonomic as
   when using exceptions (and more ergonomic when you need to wrap the error).
   But it's also explicit and visible in a code review, as we've discussed in the
   section about a tricky `f(g(x))`.
+
 - More syntax sugar like [`if
   let`](https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html),
   [`while
   let`](https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html),
   [`let-else`](https://doc.rust-lang.org/rust-by-example/flow_control/let_else.html).
+
 - The
   [`#[non_exhaustive]`](https://doc.rust-lang.org/reference/attributes/type_system.html)
   attribute to solve the API stability problem where necessary. It's not
   unchecked, it still forces callers to handle unknown error variants from the
   future! [^base-exception]
+
 - Unrecoverable [^recover-panic]
   [`panic`](https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html)s
   that are clearly
@@ -289,15 +292,11 @@ Rust gracefully solves these issues by having:
        application (the caller) is unable (or wouldn't want to) recover from the
        current situation. [^oom-panic]
 
-</div>
-
 ## Rust's own issues
 
 It would be unfair to end the post here and declare that Rust has the best error
 handling because it solves all issues found in another language. Rust's approach
 inevitably brings in some new, different issues:
-
-<div class="spaced-ul">
 
 - When your function can encounter multiple different errors *and* you want to
   preserve concrete type information [^dyn-err], Rust makes you manually define
@@ -305,6 +304,7 @@ inevitably brings in some new, different issues:
   doesn't have [anonymous unions](https://github.com/rust-lang/rfcs/issues/294).
   But the boilerplate isn't too bad and even built-in solutions like `?`
   eliminate some of it [^thiserror].
+
 - There's also a more specific issue with those wrapper enums. Sometimes, they
   tend to grow and be shared across multiple functions, where not every function
   actually returns every error variant. This undermines the benefits of
@@ -314,6 +314,7 @@ inevitably brings in some new, different issues:
   that list the errors that the function can return! Sounds familiar, huh? The
   experimental `terrors` library does a great job of [describing this
   issue](https://github.com/komora-io/terrors?tab=readme-ov-file#motivation).
+
 - Moving around bloated return values and explicitly checking those can
   sometimes [hurt
   performance](https://www.reddit.com/r/rust/comments/k5wk7r/is_rust_leaving_performance_on_the_table_by/gehe5b2/).
@@ -323,6 +324,7 @@ inevitably brings in some new, different issues:
   optimizations](https://www.0xatticus.com/posts/understanding_rust_niche/).
   Some errors may even be represented as [zero-sized
   types](https://dev.to/hoonweedev/whats-the-use-of-zero-sized-types-in-rust-4e83).
+
 - Even though Rust supports local (non-propagating) error handling much better
   than languages with exceptions, it's still not perfect and can over-emphasize
   the "stop on the first error" pattern. Reporting multiple errors at once isn't
@@ -330,6 +332,7 @@ inevitably brings in some new, different issues:
   in-house solutions. I discuss this issue in more detail in [my in-house
   solution](https://github.com/expurple/multiple_errors) which you can use as a
   third-party library 😁
+
 - As mentioned in [this post about
   .NET](https://eiriktsarpalis.wordpress.com/2017/02/19/youre-better-off-using-exceptions/),
   exceptions usually provide good insight into the origin of an error, with
@@ -339,8 +342,6 @@ inevitably brings in some new, different issues:
   [capturing](https://doc.rust-lang.org/std/backtrace/struct.Backtrace.html#method.capture)
   backtraces where necessary; longer debugging sessions. On the other hand,
   debugging runtime issues comes up way less often in Rust 🙃
-
-</div>
 
 In my opinion, these issues aren't nearly as fundamental and annoying as the
 issues with exceptions. Now I *can* conclude that Rust has the best error

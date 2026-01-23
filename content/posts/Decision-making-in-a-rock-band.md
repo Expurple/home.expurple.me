@@ -32,28 +32,29 @@ finding photographers, videographers, album cover artists...
 
 So far, sounds great. But, on the other hand:
 
-<div class="spaced-ul">
-
 - I was often mad at rehearsals and had to explain some things that seemed
   obvious to me.
+
 - When re-watching our shows, I was often more disappointed in my bandmates'
   performance, rather than mine.
+
 - Similarly, when the time came to record the album, I was disappointed in the
   bassist's and the second guitarist's performances. I ended up recording their
   parts by myself. I wrote and demoed most of them anyway.
+
 - As a result, that second guitarist felt strangled by my control and left the
   band. Eventually, we sorted things out and brought him back. But this episode
   demonstrates that something was wrong with my approach.
+
 - And the process wasn't pleasant for me either. Including demos and rehearsals,
   the album took 1.5 years to make. And a lot of my effort too. It was worth it,
   but when it was done, I was terrified of going through the same process again.
   I didn't want to write and record the next one.
+
 - I tried to change the process, let go of that control, and rehearse some of
   the other guys' songs. But I didn't like those and ended up leaving the band.
   And afterwards, I also took an extended break from music during the *next* 2
   years.
-
-</div>
 
 ## Pondering
 

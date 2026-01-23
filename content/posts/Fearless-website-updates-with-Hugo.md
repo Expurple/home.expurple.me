@@ -144,13 +144,11 @@ has become one of my main guiding principles.
 
 ## Outstanding problems / future ideas
 
-<div class="spaced-ul">
-
 - Better automation for Hugo updates. Even though Hugo updates are one of the
   main problems described in this post, my script doesn't support this scenario
   yet. Both Hugo invocations in the script use the same global Hugo version. For
   now, I manually do something like
-  <!-- This comment acts as a blank line. Actual blank lines trigger https://github.com/mnjm/kayal/issues/62 -->
+
   ```bash
   hugo --destination public.bak --cleanDestinationDir
 
@@ -160,9 +158,10 @@ has become one of my main guiding principles.
 
   # (manually diff these two folders in VSCode)
   ```
-  <!-- This comment acts as a blank line. Actual blank lines trigger https://github.com/mnjm/kayal/issues/62 -->
+
   It works well enough. The friction is low because my overall "diffing"
   workflow is already sorted out.
+
 - [File format
   validation](https://discourse.gohugo.io/t/hugo-should-validate-output-formats/55248)
   (HTML, CSS, JS, RSS, sitemap.xml, robots.txt). Even though my script can show
@@ -171,19 +170,20 @@ has become one of my main guiding principles.
   For example, that broken RSS feed wasn't even valid XML. If I didn't open it
   in the browser and notice it, the linter would've still caught it (if I used
   such a linter).
+
 - CSS edits are "global". They don't show up in the diff of individual HTML
   pages. You need to manually find and check all the places where the rendering
   could change. Perhaps this could be solved by diffing the rendered UI image?
   Or using some dev tools to find the elements on my website that are affected
   by a change of a particular CSS selector?
+
 - An interactive prompt to update the `lastmod` date when editing a post. I'm
   always a little scared of forgetting to do that, even though that's not a big
   deal. Why an interactive prompt rather than setting the date automatically?
   Because I don't want to bump the date on *every* change to the source file
   (like adding a new tag or changing markdown formatting).
-- I'm yet to take a look at the biggest Hugo websites and see what they do.
 
-</div>
+- I'm yet to take a look at the biggest Hugo websites and see what they do.
 
 [Making a website is
 hard](https://blog.cathoderaydude.com/doku.php?id=blog:making_a_website_is_hard).
