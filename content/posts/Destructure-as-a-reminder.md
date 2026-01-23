@@ -100,25 +100,32 @@ If we take the original question seriously and ponder it, a few other solutions
 come to mind. They have some flaws, but all of them can still be useful,
 especially if you work in another language:
 
-- Your colleague could ask you. <br><sup>(Interrupting your work, and let's hope
-  that you know the right person, that they are still around, that they remember
-  how this thing works, and that nothing has substantially changed since)</sup>
+- Your colleague could ask you. <br><small>(Interrupting your work, and let's
+  hope that you know the right person, that they are still around, that they
+  remember how this thing works, and that nothing has substantially changed
+  since)</small>
+
 - You could anticipate this, document the `ProductFilter` type, and explain its
-  usage in a comment. <br><sup>(And then that comment would get
-  out-of-date)</sup>
-- Nowadays, your colleague could ask an LLM instead. <br><sup>(With a chance to
-  get back an imaginary method name)</sup>
+  usage in a comment. <br><small>(And then that comment would get
+  out-of-date)</small>
+
+- Nowadays, your colleague could ask an LLM instead. <br><small>(With a chance
+  to get back an imaginary method name)</small>
+
 - Your colleague could use Git history to find the commit that added one of the
-  other fields. <br><sup>(Let's hope that nothing has substantially changed
-  since, and that no other similar methods have been added)</sup>
+  other fields. <br><small>(Let's hope that nothing has substantially changed
+  since, and that no other similar methods have been added)</small>
+
 - Your colleague could use their IDE to find references to this type or its
-  other fields. <br><sup>(Let's hope that there aren't too many references and
+  other fields. <br><small>(Let's hope that there aren't too many references and
   that there's no macro/reflection/tooling trickery that would mess with the
-  language server 😩)</sup>
-- Your colleague could use old-school text search. <br><sup>(Let's hope that all
-  relevant code is in a single repo, and there aren't too many irrelevant
+  language server 😩)</small>
+
+- Your colleague could use old-school text search. <br><small>(Let's hope that
+  all relevant code is in a single repo, and there aren't too many irrelevant
   results or non-matching camelCase/kebab-case/whatever variations of the
-  identifier [^case-variations])</sup>
+  identifier [^case-variations])</small>
+
 - Instead of destructuring, you could write a proc macro. Let's expand
   [^expand-pun] on this a little.
 
