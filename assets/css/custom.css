@@ -1,6 +1,15 @@
 /****************** Waiting to be merged into upstream Kayal ******************/
 
-
+/* https://github.com/mnjm/kayal/pull/79 */
+main ul li:has(p)::before {
+  float: left;
+}
+main ul.lst li:has(div.lst-a)::before {
+  float: left;
+}
+main ul li p  {
+  margin-top: 1ch;
+}
 
 /********************** My permanent custom modifications *********************/
 
