@@ -154,8 +154,6 @@ Custom errors have their drawbacks:
   [`Backtrace`](https://doc.rust-lang.org/std/backtrace/struct.Backtrace.html)
   field. [^dont-need-backtraces]
 
-</div>
-
 If your application is performance-sensitive, there are also performance
 considerations that don't present a clear winner:
 
