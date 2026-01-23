@@ -1,5 +1,14 @@
 /****************** Waiting to be merged into upstream Kayal ******************/
 
+/* https://github.com/mnjm/kayal/pull/80 */
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
 /* https://github.com/mnjm/kayal/pull/79 */
 main ul li:has(p)::before {
   float: left;
