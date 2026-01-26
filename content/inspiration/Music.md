@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-01-10
+lastmod = 2026-01-26
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -163,6 +163,8 @@ Jacob Collier (get started on YouTube)
 
 Charlie Hunter (get started on YouTube)
 
+Bee Gees (selected songs)
+
 Roosevelt
 
 Crumb
@@ -308,6 +310,8 @@ Lady Gaga
 Brandy Kills (I've only listened to a few songs)
 
 Dance With The Dead
+
+Ninajirachi - I Love My Computer
 
 Donovans (I've only listened to a few songs)
 
