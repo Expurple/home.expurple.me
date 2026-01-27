@@ -2,6 +2,7 @@
 title = 'Designing Error Types in Rust Applications'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-01-27
+lastmod = 2026-01-27
 summary = 'How to manage your custom errors and minimize pain.'
 +++
 
@@ -548,6 +549,15 @@ My other posts about [error handling]({{< ref "/tags/error-handling/"
 3. ["Go Didn't Get Error Handling Right"]({{< ref
    "/posts/go-did-not-get-error-handling-right/" >}})
 4. **"Designing Error Types in Rust Applications"**
+
+## Discuss
+
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1qodf3o/designing_error_types_in_rust_applications/?)
+- [{{< icon "reddit" >}}
+  r/programming](https://www.reddit.com/r/programming/comments/1qodfji/designing_error_types_in_rust_applications/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=46779507)
 
 [^huge-codebase]: Or unless you have a widely used function in a huge codebase
 where the callers could be considered an uncontrollable "outside world" from
