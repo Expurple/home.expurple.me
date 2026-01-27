@@ -2,7 +2,7 @@
 title = "Go Didn't Get Error Handling Right"
 tags = ['error handling', 'tech']
 date = 2025-07-01
-lastmod = 2025-07-01
+lastmod = 2026-01-27
 showToc = false
 summary = "I've finally found a way to put this concisely!"
 +++
@@ -57,6 +57,8 @@ My other posts about error handling:
 2. ["Why Use Structured Errors in Rust Applications?"]({{< ref
   "/posts/why-use-structured-errors-in-rust-applications/" >}})
 3. **"Go Didn't Get Error Handling Right"**
+4. ["Designing Error Types in Rust Applications"]({{< ref
+   "/posts/designing-error-types-in-rust-applications/" >}})
 
 ## Discuss
 

@@ -2,7 +2,7 @@
 title = 'Why Use Structured Errors in Rust Applications?'
 tags = ['error handling', 'rust', 'tech']
 date = 2025-05-28
-lastmod = 2025-07-01
+lastmod = 2026-01-27
 summary = 'Going against the common wisdom of "using `anyhow` for applications".'
 +++
 
@@ -214,6 +214,8 @@ handling:
 2. **"Why Use Structured Errors in Rust Applications?"**
 3. ["Go Didn't Get Error Handling Right"]({{< ref
    "/posts/go-did-not-get-error-handling-right/" >}})
+4. ["Designing Error Types in Rust Applications"]({{< ref
+   "/posts/designing-error-types-in-rust-applications/" >}})
 
 ## Discuss
 

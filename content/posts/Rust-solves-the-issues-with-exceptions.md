@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'rust', 'tech']
 date = 2024-11-30
-lastmod = 2025-07-09
+lastmod = 2026-01-27
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
 +++
@@ -367,6 +367,8 @@ My other posts about error handling:
   "/posts/why-use-structured-errors-in-rust-applications/" >}})
 3. ["Go Didn't Get Error Handling Right"]({{< ref
    "/posts/go-did-not-get-error-handling-right/" >}})
+4. ["Designing Error Types in Rust Applications"]({{< ref
+   "/posts/designing-error-types-in-rust-applications/" >}})
 
 ## Discuss
 
