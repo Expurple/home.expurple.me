@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-01-26
+lastmod = 2026-01-31
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -81,6 +81,9 @@ the later ones yet)
 James Brown (selected songs with famous drums)
 
 Augustus Pablo – King Tubbys Meets Rockers Uptown
+
+💿 maya ongaku (Maybe Psychic single is the strongest so far, but everything's
+really good)
 
 Jeff Beck (live shows)
 
