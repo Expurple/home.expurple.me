@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-01-31
+lastmod = 2026-02-06
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -435,10 +435,8 @@ Suicide Silence
 
 Attila - Guilty Pleasure (haven't listened to the other ones yet)
 
-💿 Bring Me The Horizon (these are my favorites, but the others are good too):
-
-- There Is A Hell...
-- Sempiternal
+💿 Bring Me The Horizon (Sempiternal is my favorite, but each album has
+something good)
 
 Architects - Holy Hell (my favorite so far, but I haven't listened to them much)
 
