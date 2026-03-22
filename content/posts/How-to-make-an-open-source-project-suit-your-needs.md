@@ -2,6 +2,7 @@
 title = 'How to Make an Open-Source Project Suit Your Needs'
 tags = ["tech"]
 date = 2026-03-22
+lastmod = 2026-03-22
 summary = "To fork or not to fork? How to contribute substantial changes?"
 +++
 
@@ -116,4 +117,6 @@ Go ahead, fork it, and make it work for you!
 ## Discuss
 
 - [{{< icon "discord" >}} Start of the original Discord
-  thread](https://discord.com/channels/873880840487206962/900758376164757555/1484916155528253510).
+  thread](https://discord.com/channels/873880840487206962/900758376164757555/1484916155528253510)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=47476740)
