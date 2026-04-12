@@ -2,6 +2,7 @@
 title = 'Flat Error Codes Are Not Enough'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-04-12
+lastmod = 2026-04-12
 summary = "Why you need nested, structured error data."
 +++
 
@@ -103,4 +104,10 @@ See also my other posts about [error handling]({{< ref "/tags/error-handling/"
 ## Discuss
 
 - [{{< icon "reddit" >}} The Reddit comment thread that prompted this
-  post](https://www.reddit.com/r/programming/comments/1qodfji/designing_error_types_in_rust_applications/o35c3hy/)
+  post](https://www.reddit.com/r/programming/comments/1qodfji/designing_error_types_in_rust_applications/o2tvjpi/)
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1sjg9h2/flat_error_codes_are_not_enough/?)
+- [{{< icon "reddit" >}}
+  r/programming](https://www.reddit.com/r/programming/comments/1sjg9v6/flat_error_codes_are_not_enough/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=47740223)
