@@ -10,7 +10,7 @@ summary = "Why you need nested, structured error data."
 
 I'm writing this in pushback against ["Stop Forwarding Errors, Start Designing
 Them"](https://fast.github.io/blog/stop-forwarding-errors-start-designing-them/)
-and [other similar
+and other [similar
 ideas](https://www.reddit.com/r/programming/comments/1qodfji/designing_error_types_in_rust_applications/o2tvjpi/).
 Those suggest that you only need one concrete `Error` type per library, with two
 fields:
