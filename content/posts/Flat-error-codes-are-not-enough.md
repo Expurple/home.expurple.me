@@ -37,7 +37,7 @@ keeping your codebase clean and minimal.
 
 Flat error codes might work in your own application code, where you rarely need
 complex error recovery. In the Rust community, many application devs already
-[return a string with no specific "error code" at
+return [a string with no specific "error code" at
 all](https://docs.rs/anyhow/latest/anyhow/). (Although, personally, [I'm against
 that]({{< ref "/posts/why-use-structured-errors-in-rust-applications/"
 >}})).
