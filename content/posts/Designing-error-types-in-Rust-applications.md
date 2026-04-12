@@ -2,7 +2,7 @@
 title = 'Designing Error Types in Rust Applications'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-01-27
-lastmod = 2026-01-27
+lastmod = 2026-04-12
 summary = 'How to manage your custom errors and minimize pain.'
 +++
 
@@ -539,16 +539,8 @@ Good articles that I haven't linked anywhere else in the post:
   Rust"](https://mmapped.blog/posts/12-rust-error-handling) - a good "basic"
   guide to designing library errors.
 
-My other posts about [error handling]({{< ref "/tags/error-handling/"
->}}):
-
-1. ["Rust Solves The Issues With Exceptions"]({{< ref
-  "/posts/rust-solves-the-issues-with-exceptions/" >}})
-2. ["Why Use Structured Errors in Rust Applications?"]({{< ref
-  "/posts/why-use-structured-errors-in-rust-applications/" >}})
-3. ["Go Didn't Get Error Handling Right"]({{< ref
-   "/posts/go-did-not-get-error-handling-right/" >}})
-4. **"Designing Error Types in Rust Applications"**
+See also my other posts about [error handling]({{< ref "/tags/error-handling/"
+>}}).
 
 ## Discuss
 

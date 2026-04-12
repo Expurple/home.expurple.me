@@ -2,7 +2,7 @@
 title = 'Rust Solves The Issues With Exceptions'
 tags = ['error handling', 'rust', 'tech']
 date = 2024-11-30
-lastmod = 2026-01-27
+lastmod = 2026-04-12
 openToC = true
 summary = "A small topic that's too big to fit in a larger Rust post."
 +++
@@ -351,7 +351,7 @@ handling! 💥
 
 ## Related reading
 
-Good articles that I haven't hyperlinked anywhere else in the post:
+Good articles that I haven't linked anywhere else in the post:
 
 - ["Checked exceptions: Java’s biggest
   mistake"](https://literatejava.com/exceptions/checked-exceptions-javas-biggest-mistake/)
@@ -360,15 +360,8 @@ Good articles that I haven't hyperlinked anywhere else in the post:
 - ["Either vs Exception Handling"](https://dev.to/anthonyjoeseph/either-vs-exception-handling-3jmg)
 - ["The Error Model"](https://joeduffyblog.com/2016/02/07/the-error-model/)
 
-My other posts about error handling:
-
-1. **"Rust Solves The Issues With Exceptions"**
-2. ["Why Use Structured Errors in Rust Applications?"]({{< ref
-  "/posts/why-use-structured-errors-in-rust-applications/" >}})
-3. ["Go Didn't Get Error Handling Right"]({{< ref
-   "/posts/go-did-not-get-error-handling-right/" >}})
-4. ["Designing Error Types in Rust Applications"]({{< ref
-   "/posts/designing-error-types-in-rust-applications/" >}})
+See also my other posts about [error handling]({{< ref "/tags/error-handling/"
+>}}).
 
 ## Discuss
 
