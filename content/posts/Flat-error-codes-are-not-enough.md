@@ -2,7 +2,7 @@
 title = 'Flat Error Codes Are Not Enough'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-04-12
-lastmod = 2026-04-12
+lastmod = 2026-04-14
 summary = "Why you need nested, structured error data."
 +++
 
@@ -91,6 +91,8 @@ still wouldn't be enough for my use case. It's not enough to know that I
 violated a CHECK constraint. I need other structured data, like the name of the
 constraint. Otherwise, I would have to parse that back from the error message.
 Which is obviously inferior.
+
+---
 
 ## Related reading
 
