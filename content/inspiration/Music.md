@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-04-14
+lastmod = 2026-04-15
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -195,6 +195,8 @@ Jojo Mayer & Nerve (live videos on YouTube, starting from around 2015)
 Die Antwoord (music videos)
 
 Пошлая Молли (selected songs)
+
+DELTA ARTHUR (music videos on YouTube)
 
 Horse The Band - R. Borlax (haven't listened to the other stuff)
 
