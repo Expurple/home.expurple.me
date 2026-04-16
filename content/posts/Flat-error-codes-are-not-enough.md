@@ -2,7 +2,7 @@
 title = 'Flat Error Codes Are Not Enough'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-04-12
-lastmod = 2026-04-14
+lastmod = 2026-04-16
 summary = "Why you need nested, structured error data."
 +++
 
@@ -24,7 +24,7 @@ fields:
 2. A flat `ErrorCode`/`ErrorKind` enum, meant for robust programmatic error
    handling and recovery.
 
-    There should be just one such enum per library. It should be mininal. It
+    There should be just one such enum per library. It should be minimal. It
     shouldn't expose every specific low-level error that your library might
     encounter. Instead, only expose the level of detail that's relevant to the
     calling libraries' error-handling logic. The detailed reporting for the user
