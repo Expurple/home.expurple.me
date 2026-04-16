@@ -2,7 +2,7 @@
 title = 'Flat Error Codes Are Not Enough'
 tags = ['error handling', 'rust', 'tech']
 date = 2026-04-12
-lastmod = 2026-04-14
+lastmod = 2026-04-16
 summary = "Why you need nested, structured error data."
 +++
 
