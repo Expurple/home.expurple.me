@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-04-15
+lastmod = 2026-04-24
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -123,8 +123,6 @@ Caligulas Guns - I
 
 Cyndi Lauper - She's So Unusual (haven't listened to the other ones yet)
 
-Кино (selected songs)
-
 Skeletal Family
 
 O. Children - O. Children
@@ -151,8 +149,6 @@ TK from Ling tosite sigure
 Sonic Youth
 
 Blur (the 90s, ofc)
-
-Oasis (mostly the first two albums, ofc)
 
 Конец солнечных дней (barely listened to them)
 
