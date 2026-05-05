@@ -2,7 +2,7 @@
 title = 'Promote Ideas to Drafts'
 tags = ["writing"]
 date = 2025-08-31
-summary = "Go from an ever-growing pile of unrealized ideas to an ever-growing pile of unfinished grafts! 🤪"
+summary = "Go from an ever-growing pile of unrealized ideas to an ever-growing pile of unfinished drafts! 🤪"
 +++
 
 I have a few files, organized by topic, where I dump my blog post ideas.
