@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-04-24
+lastmod = 2026-06-16
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -44,8 +44,6 @@ Van Halen (barely listened to them, but they slap)
 Black Sabbath (I've only listened to the first two yet)
 
 AC/DC (I've only heard the hits)
-
-Electric Moon
 
 Doom Side of the Moon – Doom Side of the Moon
 
@@ -130,8 +128,6 @@ O. Children - O. Children
 Увула (I heard them when I was already done with shoegaze, but they seem good
 for the genre)
 
-Cocteau Twins - Heaven Or Las Vegas (haven't listened to the other ones much)
-
 Ringo Deathstarr - Colour Trip (haven't listened to the other ones much)
 
 Lovesliescrushing - Blowyelashwish (haven't listened to the other ones much)
@@ -207,8 +203,6 @@ yet)
 
 слушай экзорцист
 
-Dr. Dre - 2001 (have only listened to that one yet)
-
 Fredrik Thordendal's Special Defects - Sol Niger Within (I think, I've only
 listened to it one time 🙈)
 
@@ -257,8 +251,6 @@ Deafheaven - Sunbather (haven't listened to the other stuff)
 Psychonaut 4 - Neurastenia (haven't listened to the other stuff)
 
 Insomnium - Winter's Gate (haven't listened to the other stuff)
-
-Megadeth (only the 90s)
 
 ---
 
