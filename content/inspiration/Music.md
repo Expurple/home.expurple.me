@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-06-16
+lastmod = 2026-06-22
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -154,8 +154,6 @@ SUMMER COMA / САММЕР КОМА (selectively)
 
 Дом Престарелых Аутистов
 
-The XX (I've only listened to the first two albums)
-
 Bulldog Eyes (barely listened to them)
 
 Tim Hecker - Ravedeath, 1972 (barely listened to)
@@ -163,8 +161,6 @@ Tim Hecker - Ravedeath, 1972 (barely listened to)
 Kontakte - We Move Through Negative Spaces (barely listened to the other stuff)
 
 t.A.T.u - 200 km/h in the wrong lane
-
-Electric Youth
 
 Space (I've only listened to Magic Fly and Just Blue)
 
@@ -237,8 +233,6 @@ Slayer (mostly the hits)
 Alice In Chains
 
 Fear Factory
-
-Lamb Of God (until Wrath, inclusively)
 
 The Great Southern (Pantera tribute on YouTube)
 
