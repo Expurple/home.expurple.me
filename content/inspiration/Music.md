@@ -1,7 +1,7 @@
 +++
 title = 'Music 🎸'
 # TODO: display that. Like on the home page, or at the top like in posts?
-lastmod = 2026-06-22
+lastmod = 2026-06-25
 showDate = false
 showReadingTime = false
 showBreadcrumbs = true
@@ -42,8 +42,6 @@ Sucherman)
 Van Halen (barely listened to them, but they slap)
 
 Black Sabbath (I've only listened to the first two yet)
-
-AC/DC (I've only heard the hits)
 
 Doom Side of the Moon – Doom Side of the Moon
 
