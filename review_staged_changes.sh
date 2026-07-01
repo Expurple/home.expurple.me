@@ -17,7 +17,7 @@ head_build_dir=public.bak
 staged_build_dir=public
 
 hugo_generate_into() {
-    hugo --destination "$1" --cleanDestinationDir
+    hugo --buildFuture --destination "$1" --cleanDestinationDir
 }
 
 # For some reason, `git stash push --staged` SOMETIMES returns 0
