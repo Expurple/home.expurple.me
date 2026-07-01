@@ -2,6 +2,7 @@
 title = 'A Big Standard Library Is Overkill'
 tags = ["rust", "tech"]
 date = 2026-07-02
+lastmod = 2026-07-02
 showToc = false
 summary = "Securing the supply chain without cementing the APIs."
 +++
@@ -51,3 +52,10 @@ of many individual authors.
 - [{{< icon "reddit" >}} A related "supply chain" thread that prompted this
   post](https://www.reddit.com/r/rust/comments/1sjh4no/no_one_owes_you_supplychain_security/)
 - [LetsBeRealAboutDependencies](https://wiki.alopex.li/LetsBeRealAboutDependencies)
+
+## Discuss
+
+- [{{< icon "reddit" >}}
+  r/rust](https://www.reddit.com/r/rust/comments/1ukxbe3/a_big_standard_library_is_overkill/?)
+- [{{< icon "hackernews" >}} Hacker
+  News](https://news.ycombinator.com/item?id=48752799)
