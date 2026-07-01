@@ -1,6 +1,5 @@
 +++
 title = 'Music 🎸'
-# TODO: display that. Like on the home page, or at the top like in posts?
 lastmod = 2026-06-25
 showDate = false
 showReadingTime = false
